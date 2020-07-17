@@ -1,0 +1,34 @@
+notify_petes_iphone_template:
+  alias: Notify Petes iPhone Template
+  sequence:
+  - alias: Send iOS Notification
+    service: notify.ios_petes_iphone
+    data_template: 
+      title: "{{ notify_title }}"
+      message: "{{ notify_message }}"
+
+notify_petes_iphone_jpeg_template:
+  alias: Notify Petes iPhone Template
+  sequence:
+  - alias: Send iOS Notification
+    service: notify.ios_petes_iphone
+    data_template: 
+      title: "{{ notify_title }}"
+      message: "{{ notify_message }}"
+      data:
+        attachment:
+          url: "{{ notify_url }}"
+          content-type: "{{ content_type }}"
+          hide-thumbnail: "{{ hide_thumb }}"
+
+############################
+#         TEMPLATE         #
+############################
+#test_send_notification_to_iphone:
+#  alias: test_send_notification_to_iphone
+#  sequence:
+#  - alias: send ios notification
+#    service: script.test_notify_template
+#    data:
+#      notify_title: "Pass the Title!"
+#      notify_message: "Pass the message for the test$"

@@ -1,0 +1,69 @@
+vacation_mode:
+  name: Vacation Mode
+  icon: mdi:beach
+pete_home:
+  name: Pete Home
+jessi_home:
+  name: Jessi Home
+empty_house:
+  name: House is empty
+volume_up:
+  name: Volume Up
+  initial: off
+volume_down:
+  name: Volume Down 
+  initial: off
+living_room_tv:
+  name: Living Room TV
+media_room_tv:
+  name: Media Room TV
+lr_plex_pause:
+  name: Living Room Plex Pause
+lr_plex_play:
+  name: Living Room Plex Play
+arlo_lr_arm_active:
+  name: Lving Room Armed
+arlo_lr_disarm_active:
+  name: Living Room Disarmed
+arlo_lr_home_active:
+  name: Living Room Home
+arlo_lr_sleep_active:
+  name: Living Room Sleep
+arlo_g_arm_active:
+  name: Garage Armed
+arlo_g_disarm_active:
+  name: Garage Disarmed
+
+
+good_night:
+  name: Good Night
+good_morning:
+  name: Good Morning
+
+
+switch_ac_kitchen:
+  name: AC kitchen
+switch_ac_livingroom:
+  name: AC living room
+switch_tv:
+  name: TV
+
+basement_movie_scene:
+  name: Basement Movie Scene
+basement_tv_scene:
+  name: Basement TV Scene
+
+dog_bathroom_time:
+  name: Dog Bathroom Time
+
+basement_bedroom:
+  name: Basement Bedroom Occupied
+
+basement_occupied:
+  name: Basement Occupied
+
+hass_cast_off:
+  name: HASS Cast Off
+
+hass_cast_cameras:
+  name: HASS Cast Cameras

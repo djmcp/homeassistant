@@ -1,0 +1,43 @@
+#- platform: arlo
+#  ffmpeg_arguments: '-pred 1 -q:v 2'
+# - name: Garage Wyze
+#   platform: ffmpeg
+#   input: '-re -i /motioneye/media/Latest/Garage_Wyze.mp4'
+#   extra_arguments: '-pred 1 -q:v 2'
+# - name: Jessi Location
+#   platform: generic
+#   still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.jessi_jessis_iphone.attributes.latitude }},{{ states.device_tracker.jessi_jessis_iphone.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:J%7C{{ states.device_tracker.jessi_jessis_iphone.attributes.latitude }},{{ states.device_tracker.jessi_jessis_iphone.attributes.longitude }}
+#   limit_refetch_to_url_change: true
+# - name: Pete Location
+#   platform: generic
+#   still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.pete_petes_iphone.attributes.latitude }},{{ states.device_tracker.pete_petes_iphone.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.pete_petes_iphone.attributes.latitude }},{{ states.device_tracker.pete_petes_iphone.attributes.longitude }}
+#   limit_refetch_to_url_change: true
+# - name: Back Deck Last Motion
+#   platform: generic
+#   still_image_url: >
+#     {{ states('input_text.camera_back_deck_url') }}
+# - name: Front Porch Last Motion
+#   platform: generic
+#   still_image_url: >
+#     {{ states('input_text.camera_front_porch_url') }}
+# - name: Living Room Last Motion
+#   platform: generic
+#   still_image_url: >
+#     {{ states('input_text.camera_living_room_url') }}
+# - name: Driveway Last Motion
+#   platform: generic
+#   still_image_url: >
+#     {{ states('input_text.camera_driveway_url') }}
+# - name: Basement Last Motion
+#   platform: generic
+#   still_image_url: >
+#     {{ states('input_text.camera_basement_url') }}
+
+# - platform: generic
+#   name: Doggy Cam
+#   still_image_url: https://10.0.0.30/cgi-bin/currentpic.cgi
+#   stream_source: rtsp://10.0.0.30:8554/unicast
+#   verify_ssl: false
+#   username: root
+#   password: ismart12
+#   authentication: basic

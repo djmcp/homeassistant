@@ -1,0 +1,33 @@
+- id: 'mr_plex_pause'
+  alias: Media Room Plex Pause
+  trigger:
+  - entity_id: input_boolean.mr_plex_pause
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - alias: Pause plex
+    service: media_player.media_pause
+    data:
+      entity_id: media_player.samsung_tv_mr_plex
+  - alias: Turn off input_boolean
+    data:
+      entity_id: input_boolean.mr_plex_pause
+    service: input_boolean.turn_off
+
+- id: 'mr_plex_play'
+  alias: Media Room Plex Play
+  trigger:
+  - entity_id: input_boolean.mr_plex_play
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - alias: Pause plex
+    service: media_player.media_play
+    data:
+      entity_id: media_player.samsung_tv_mr_plex
+  - alias: Turn off input_boolean
+    data:
+      entity_id: input_boolean.mr_plex_play
+    service: input_boolean.turn_off

@@ -1,0 +1,32 @@
+- platform: mqtt
+  name: Front Door
+  state_topic: "hasshub/lock/front_door/state"
+  command_topic: "hasshub/lock/front_door/state/set"
+  payload_lock: "locked"
+  payload_unlock: "unlocked"
+  state_locked: "locked"
+  state_unlocked: "unlocked"
+  optimistic: false
+  qos: 1
+
+- platform: mqtt
+  name: Back Door
+  state_topic: "hasshub/lock/back_door/state"
+  command_topic: "hasshub/lock/back_door/state/set"
+  payload_lock: "locked"
+  payload_unlock: "unlocked"
+  state_locked: "locked"
+  state_unlocked: "unlocked"
+  optimistic: false
+  qos: 1
+
+- platform: mqtt
+  name: Garage Entry Door
+  state_topic: "hasshub/lock/garage_entry_door/state"
+  command_topic: "hasshub/lock/garage_entry_door/state/set"
+  payload_lock: "locked"
+  payload_unlock: "unlocked"
+  state_locked: "locked"
+  state_unlocked: "unlocked"
+  optimistic: false
+  qos: 1

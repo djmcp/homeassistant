@@ -1,0 +1,28 @@
+camera_front_porch_url:
+  name: Front Porch Camera URL
+camera_back_deck_url:
+  name: Back Deck Camera URL
+camera_living_room_url:
+  name: Living Room Camera URL
+camera_basement_url:
+  name: Basement Camera URL
+camera_driveway_url:
+  name: Driveway Camera URL
+
+camera_front_porch_time:
+  name: Front Porch Camera time
+camera_back_deck_time:
+  name: Back Deck Camera time
+camera_living_room_time:
+  name: Living Room Camera time
+camera_basement_time:
+  name: Basement Camera time
+camera_driveway_time:
+  name: Driveway Camera time
+
+hasstts_say:
+  name: HASSTTS_Say
+  max: 500
+
+trash_day:
+  name: Trash Day

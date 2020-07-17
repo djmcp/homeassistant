@@ -1,0 +1,42 @@
+- id: 'volume_up'
+  alias: Volume_Up
+  trigger:
+  - entity_id: input_boolean.volume_up
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - alias: Call Volume Up Script
+    data: {}
+    service: script.turn_volume_up_5
+  - alias: Turn off input_boolean
+    data:
+      entity_id: input_boolean.volume_up
+    service: input_boolean.turn_off
+
+- id: 'volume_down'
+  alias: Volume_Down
+  trigger:
+  - entity_id: input_boolean.volume_down
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - alias: Call Volume Up Script
+    data: {}
+    service: script.turn_volume_down_5
+  - alias: Turn off input_boolean
+    data:
+      entity_id: input_boolean.volume_down
+    service: input_boolean.turn_off
+
+# - id: 'keep_broadlink_alive'
+#   alias: Keep Broadlink Alive
+#   trigger:
+#   - platform: time
+#     minutes: '/2'
+#     seconds: 00
+#   action: 
+#   - alias: Send keep alive
+#     data: {}
+#     service: script.tv_keep_alive

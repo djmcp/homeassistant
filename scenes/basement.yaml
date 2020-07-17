@@ -1,0 +1,67 @@
+- name: BasementMediaRoomTVScene
+  entities:
+    script.basement_media_room_tv_scene:
+      state: 'on'
+
+- name: BasementTVLights
+  entities:
+    light.bar_lights: 
+      state: 'off'
+    light.media_room_tv_lights:
+      state: 'on'
+      brightness_pct: '01'
+    light.media_room_back_lights:
+      state: 'on'
+      brightness_pct: '01'
+    input_boolean.basement_tv_scene:
+      state: 'on'
+    input_boolean.basement_movie_scene:
+      state: 'off'
+
+- name: BasementMediaRoomMovieScene
+  entities:
+    script.basement_media_room_movie_scene:
+      state: 'on'
+- name: BasementMovieLights
+  entities:
+    light.bar_lights: 
+      state: 'off'
+    light.media_room_tv_lights: 
+      state: 'off'
+    light.media_room_back_lights:
+      state: 'on'
+      brightness_pct: '01'
+    input_boolean.basement_movie_scene:
+      state: 'on'
+    input_boolean.basement_tv_scene:
+      state: 'off'
+
+- name: BasementPartyScene
+  entities:
+    script.basement_party_scene:
+      state: 'on'
+- name: BasementPartyLights
+  entities:
+    light.bar_lights:
+      state: 'on'
+      brightness_pct: '75'
+    light.media_room_tv_lights:
+      state: 'on'
+      brightness_pct: '20'
+    light.media_room_back_lights:
+      state: 'on'
+      brightness_pct: '75'
+
+- name: BasementShutdown 
+  entities:
+    script.basement_shutdown_basement:
+      state: 'on'
+
+- name: BasementPauseTV
+  entities:
+    script.media_room_pause_tv:
+      state: 'on'
+- name: BasementPlayTV
+  entities:
+    script.media_room_play_tv:
+      state: 'on'

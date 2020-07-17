@@ -1,0 +1,42 @@
+- cal_id: pv7u32rtf0r63sgg5nt6lklkhc0sfpjg@import.calendar.google.com
+  entities:
+  - device_id: trash_day
+    ignore_availability: true
+    name: Trash Day
+    track: true
+    search: "#and"
+
+- cal_id: !secret jemail
+  entities:
+  - device_id: !secret jemail_dev
+    ignore_availability: true
+    name: !secret jemail
+    track: false
+
+- cal_id: !secret pemail
+  entities:
+  - device_id: fitness
+    ignore_availability: true
+    name: Fitness
+    track: false
+
+- cal_id: '#contacts@group.v.calendar.google.com'
+  entities:
+  - device_id: contacts
+    ignore_availability: true
+    name: Contacts
+    track: false
+
+- cal_id: en.usa#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: holidays_in_united_states
+    ignore_availability: true
+    name: Holidays in United States
+    track: false
+
+- cal_id: addressbook#contacts@group.v.calendar.google.com
+  entities:
+  - device_id: contacts
+    ignore_availability: true
+    name: Contacts
+    track: false

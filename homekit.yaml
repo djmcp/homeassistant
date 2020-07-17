@@ -1,0 +1,35 @@
+auto_start: true
+name: Home Assistant Bridge
+ip_address: 10.0.0.135
+port: 51827
+filter:
+  include_domains:
+    - light
+    - switch
+    - cover
+    - fan
+    - lock
+  exclude_entities:
+    - light.basement_bar_center
+    - light.basement_bar_left
+    - light.basement_bar_right
+    - light.media_room_back_left
+    - light.media_room_back_right
+    - light.media_room_center
+    - light.basement_stairs_bottom
+    - light.basement_stairs_top
+    - light.do_not_use_breakfast_table_lights
+    - light.do_not_use_kitchen_bar_lights
+    - light.led_controller_lr_1
+    - light.led_controller_lr_2
+    - switch.main_garage_door_relay_power
+    - switch.front_yard
+    - switch.north_side_driveway
+    - switch.back_fence
+    - switch.along_back_house
+    - switch.center_backyard
+    - switch.south_side
+    - switch.mcdowellrachio_in_standby_mode
+    - switch.living_room_ec
+    - switch.nuc_outlet
+    - switch.laundry_washer

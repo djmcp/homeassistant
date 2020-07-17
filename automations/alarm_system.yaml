@@ -1,0 +1,26 @@
+- id: House Alarm Triggered
+  alias: House Alarm Triggered
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.house
+    to: 'triggered'
+  action:
+  - alias: send ios notification
+    service: script.notify_petes_iphone_template
+    data_template:
+      notify_title: "ALARM TRIGGERED"
+      notify_message: "Alarm has been triggered at home"
+
+
+- id: House Alarm Warning
+  alias: House Alarm Warning
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.house
+    to: 'warning'
+  action:
+  - alias: send ios notification
+    service: script.notify_petes_iphone_template
+    data_template:
+      notify_title: "Alarm Warning"
+      notify_message: "Warning on alarm at home"

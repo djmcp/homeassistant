@@ -1,0 +1,145 @@
+###############################
+# Living Room TV Channels     #
+###############################
+lr_tv_842:
+  alias: lr_tv_842
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.living_room_tv_channel
+    data:
+      option: '842'
+
+lr_tv_864:
+  alias: lr_tv_864
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.living_room_tv_channel
+    data:
+      option: '864'
+
+lr_tv_865:
+  alias: lr_tv_865
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.living_room_tv_channel
+    data:
+      option: '865'
+
+lr_tv_827:
+  alias: lr_tv_827
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.living_room_tv_channel
+    data:
+      option: '827'
+
+lr_tv_844:
+  alias: lr_tv_844
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.living_room_tv_channel
+    data:
+      option: '844'
+
+lr_tv_878:
+  alias: lr_tv_878
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.living_room_tv_channel
+    data:
+      option: '878'
+
+lr_tv_863:
+  alias: lr_tv_863
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.living_room_tv_channel
+    data:
+      option: '863'
+
+lr_tv_803:
+  alias: lr_tv_803
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.living_room_tv_channel
+    data:
+      option: '803'
+
+lr_tv_812:
+  alias: lr_tv_812
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.living_room_tv_channel
+    data:
+      option: '812'
+
+lr_tv_808:
+  alias: lr_tv_808
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.living_room_tv_channel
+    data:
+      option: '808'
+
+lr_tv_862:
+  alias: lr_tv_862
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.living_room_tv_channel
+    data:
+      option: '862'
+
+lr_tv_805:
+  alias: lr_tv_805
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.living_room_tv_channel
+    data:
+      option: '805'
+
+###############################
+# Whole House Scene    #
+###############################
+
+whole_house_scene_good_night:
+  alias: whole_house_scene_good_night
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.whole_house_scene
+    data:
+      option: 'Good Night'
+
+whole_house_scene_good_morning:
+  alias: whole_house_scene_good_morning
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.whole_house_scene
+    data:
+      option: 'Good Morning'
+
+whole_house_scene_brooks_bedtime:
+  alias: whole_house_scene_brooks_bedtime
+  sequence:
+  - service: input_select.select_option
+    entity_id: input_select.whole_house_scene
+    data:
+      option: 'Brooks Bedtime'
+
+
+###############################
+# Bottle Warmer               #
+###############################
+
+
+bottle_warmer_switch_turn_off:
+  alias: bottle_warmer_switch_turn_off
+  sequence:
+  - service: switch.turn_off
+    entity_id: switch.bottle_warmer
+
+
+bottle_warmer_switch_turn_on:
+  alias: bottle_warmer_switch_turn_on
+  sequence:
+  - service: switch.turn_on
+    entity_id: switch.bottle_warmer

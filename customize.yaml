@@ -1,0 +1,87 @@
+input_boolean.pete_home:
+  homebridge_visible: true
+input_boolean.jessi_home:
+  homebridge_visible: true
+input_boolean.empty_house:
+  homebridge_visible: true
+input_boolean.good_night:
+  homebridge_visible: true
+input_boolean.good_morning:
+  homebridge_visible: true
+device_tracker.pete_petes_iphone:
+  friendly_name: Pete's Location
+device_tracker.jessi_jessis_iphone:
+  friendly_name: Jessi's Location
+sensor.bedroom_wink_relay_temperature:
+  friendly_name: Bedroom Temperature
+sensor.kitchen_wink_relay_temperature:
+  friendly_name: Kitchen Temperature
+light.nursery_lights:
+  friendly_name: Nursery Lights
+light.nursery_side_lights:
+  friendly_name: Nursery Side Lights
+switch.master_bedroom_fan:
+  icon: mdi:fan
+switch.master_bedroom_light:
+  icon: mdi:lightbulb
+switch.living_room_light:
+  icon: mdi:lightbulb
+switch.living_room_fan:
+  icon: mdi:fan
+switch.master_bedroom_lamp:
+  icon: mdi:lightbulb
+switch.dining_room:
+  icon: mdi:lightbulb
+switch.kitchen_bar:
+  icon: mdi:lightbulb
+switch.breakfast_table:
+  icon: mdi:lightbulb
+switch.garage_entry:
+  icon: mdi:lightbulb
+switch.christmas_tree:
+  icon: mdi:pine-tree
+  friendly_name: Christmas Tree
+switch.chandelier:
+  icon: mdi:lightbulb
+group.all_automations:
+  hidden: false
+binary_sensor.back_door_master:
+  hidden: true
+binary_sensor.front_door_master:
+  hidden: true
+binary_sensor.garage_entry_door_master:
+  hidden: true
+sensor.media_room_harmony_hub_online:
+  icon: mdi:remote
+binary_sensor.living_room_ec:
+  icon: mdi:television
+sensor.media_room_samsung_online:
+  icon: mdi:television
+light.basement_lights:
+  homebridge_visible: true
+light.media_room_lights:
+  homebridge_visible: true
+light.bar_lights:
+  homebridge_visible: true
+cover.main_garage_door:
+  device_class: garage
+  homebridge_visible: true
+  homebridge_cover_type: garage_door
+  friendly_name: Main Garage Door
+cover.side_garage_door:
+  device_class: garage
+  homebridge_visible: true
+  homebridge_cover_type: garage_door
+  friendly_name: Side Garage Door
+media_player.tv_un58mu6100: {}
+binary_sensor.brooks_snoo_status:
+  icon: mdi:hotel
+binary_sensor.brooks_space_heater_status:
+  icon: mdi:radiator
+
+zone.home:
+  beacon:
+    uuid: B0702980-A295-A8AB-F734-031A98A512DE
+    major: 3
+    minor: 12
+

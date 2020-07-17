@@ -1,0 +1,106 @@
+home_status:
+  name: Home Status
+  icon: mdi:security-home
+  options:
+    - Everybody Home
+    - Nobody Home
+    - Pete Home
+    - Jessi Home 
+
+arlo_garage_status:
+  name: Arlo Garage Status
+  options:
+    - Arm Active
+    - Disarm Active
+
+arlo_lr_status:
+  name: Arlo Living Room Status
+  options:
+    - Arm Active
+    - Disarm Active
+    - Home Active
+    - Sleep Active
+
+whole_house_scene:
+  name: Whole House Scene
+  options:
+    - Good Night
+    - Brooks Bedtime
+    - Good Morning
+    - Vacation
+    - Idle
+   
+guest_mode:
+  name: Guest Mode
+  options:
+    - Idle
+    - Guests
+    - Guests w/ Basement Bedroom
+
+laundry_washer_status:
+  name: Washer Status
+  options:
+    - "Off"
+    - "On"
+    - "Wash"
+    - "Spin"
+    - "Hot Water"
+    - "Done"
+
+living_room_led_scenes:
+  name: Living Room LED Scenes
+  options:
+    - "Idle"
+    - "Slow Change"
+    - "Slow Change - Diff"
+    - "Sunset"
+
+living_room_tv_channel:
+  name: Living Room TV Channel
+  options:
+    - "842"
+    - "864"
+    - "827"
+    - "844"
+    - "878"
+    - "863"
+    - "803"
+    - "812"
+    - "808"
+    - "862"
+    - "805"
+    - "000"
+
+brooks_sleep_status:
+  name: Brooks Sleep Status
+  options:
+    - Sleeping Night
+    - Napping Day
+    - Awake Night
+    - Awake Day
+    - Maybe Awake
+    - Maybe Sleeping
+
+brooks_space_heater_control:
+  name: Brooks Space Heater Control
+  options:
+    - Manual
+    - Auto
+    - Idle
+
+bottle_warmer_status:
+  name: Bottle Warmer Status
+  options:
+    - 'On'
+    - 'Off'
+    - Warning
+
+# living_room_tv_remote:
+#   name: Living Room TV Remote
+#   options:
+#     - Volume Up
+#     - Volume Down
+#     - Turn On
+#     - Turn Off
+#     - Mute
+#     - Idle

@@ -1,0 +1,57 @@
+
+#######################
+# TV CHANNELS         #
+#######################
+
+- name: CNN in the Living Room
+  entities: 
+    input_select.living_room_tv_channel: '842'
+- name: ESPN in the Living Room
+  entities: 
+    input_select.living_room_tv_channel: '864'
+- name: ESPN 2 in the Living Room
+  entities: 
+    input_select.living_room_tv_channel: '865'
+- name: Food Network in the Living Room
+  entities: 
+    input_select.living_room_tv_channel: '827'
+- name: Fox News in the Living Room
+  entities: 
+    input_select.living_room_tv_channel: '844'
+- name: Fox Sports in the Living Room
+  entities: 
+    input_select.living_room_tv_channel: '878'
+- name: Fox Sports Midwest in the Living Room
+  entities: 
+    input_select.living_room_tv_channel: '863'
+- name: CBS in the Living Room
+  entities: 
+    input_select.living_room_tv_channel: '803'
+- name: ABC in the Living Room
+  entities: 
+    input_select.living_room_tv_channel: '812'
+- name: NBC in the Living Room
+  entities: 
+    input_select.living_room_tv_channel: '808'
+- name: The Golf Channel in the Living Room
+  entities: 
+    input_select.living_room_tv_channel: '862'
+- name: Fox in the Living Room
+  entities: 
+    input_select.living_room_tv_channel: '805'
+
+
+#######################
+# HASS CAST           #
+#######################
+
+
+- name: HASS Cast Cameras
+  entities:
+    input_boolean.hass_cast_cameras:
+      state: 'on'
+
+- name: HASS Cast Off
+  entities:
+    input_boolean.hass_cast_off:
+      state: 'on'

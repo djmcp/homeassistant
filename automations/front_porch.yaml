@@ -1,0 +1,90 @@
+# - alias: Front Porch Sunset
+#   trigger:
+#   - event: sunset
+#     offset: "+00:15:00"
+#     platform: sun
+#   action:
+#   - alias: Turn on front lights
+#     data:
+#       entity_id: light.front_porch
+#       brightness: 25
+#     service: light.turn_on
+#   - alias: Turn on front lights
+#     data:
+#       entity_id: light.front_porch
+#       brightness: 25
+#     service: light.turn_on
+
+    
+
+# - alias: Front Porch Sunrise
+#   trigger:f
+#   - event: sunrise
+#     offset: "+00:30:00"
+#     platform: sun
+#   action:
+#   - alias: Turn off front lights
+#     data:
+#       entity_id: light.front_porch
+#     service: light.turn_off
+#   - alias: Turn off front lights
+#     data:
+#       entity_id: light.front_porch
+#     service: light.turn_off
+
+# - alias: Front Porch Motion
+#   trigger: 
+#   - entity_id: binary_sensor.front_porch_camera_motion
+#     from: 'off'
+#     platform: state
+#     to: 'on'
+#   - entity_id: binary_sensor.driveway_camera_motion
+#     from: 'off'
+#     platform: state
+#     to: 'on'
+#   condition:
+#     condition: and
+#     conditions: 
+#       - condition: state
+#         entity_id: sun.sun
+#         state: below_horizon
+#       - condition: state
+#         entity_id: light.front_porch
+#         state: 'on'
+#   action:
+#   - alias: Cancel timer
+#     service: timer.cancel
+#     entity_id: timer.front_porch_dim
+#   - alias: Turn up brightness
+#     data:
+#       entity_id: light.front_porch
+#       brightness: 250
+#     service: light.turn_on
+#   - alias: Turn up brightness
+#     data:
+#       entity_id: light.front_porch
+#       brightness: 250
+#     service: light.turn_on
+#   - alias: Start timer
+#     service: timer.start
+#     entity_id: timer.front_porch_dim
+
+ 
+# - alias: Front Porch Dim
+#   trigger:
+#   - platform: event
+#     event_type: timer.finished
+#     event_data:
+#       entity_id: timer.front_porch_dim
+#   action:
+#   - alias: Turn down brightness
+#     data:
+#       entity_id: light.front_porch
+#       brightness: 25
+#     service: light.turn_on
+#   - alias: Turn down brightness
+#     data:
+#       entity_id: light.front_porch
+#       brightness: 25
+#     service: light.turn_on
+

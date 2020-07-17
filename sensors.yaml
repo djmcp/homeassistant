@@ -1,0 +1,291 @@
+- platform: mqtt
+  name: "Brooks Space Heater Power"
+  state_topic: "shellies/shelly1pm-76B422/relay/0/power"
+  value_template: "{{ value }}"
+  unit_of_measurement: 'W'
+
+- platform: mqtt
+  name: "Bottle Warmer Power"
+  state_topic: "shellies/shelly1pm-76B425/relay/0/power"
+  value_template: "{{ value }}"
+  unit_of_measurement: 'W'
+
+- platform: template
+  sensors:
+
+    nuc_outlet_power_sensor:
+      value_template: '{{ states.switch.nuc_outlet.attributes.current_power_w }}'       
+      unit_of_measurement:  'W'
+
+    living_room_ec_power_sensor:
+      value_template: '{{ states.switch.living_room_ec.attributes.current_power_w }}'       
+      unit_of_measurement:  'W'
+   
+    nordictrack_treadmill_power_sensor:
+      friendly_name: Nordictrack Treadmill Power Sensor
+      value_template: '{{ states.switch.nordictrack_treadmill.attributes.current_power_w }}'       
+      unit_of_measurement:  'W'
+
+    laundry_washer_power_sensor:
+      value_template: '{{ states.switch.laundry_washer.attributes.current_power_w }}'       
+      unit_of_measurement:  'W'
+
+    nordictrack_treadmill_status:
+      friendly_name: "Nordictrack Treadmill Status"
+      value_template: >-
+        {% if states('sensor.nordictrack_treadmill_power_sensor')|float > 50 %}
+          In Use
+        {% elif states('sensor.nordictrack_treadmill_power_sensor')|float > 1 %}
+          Idle
+        {% else %}
+          Off
+        {% endif %}
+
+    brooks_space_heater_power_level:
+      friendly_name: "Brooks Space Heater Power Level"
+      value_template: >-
+        {% if states('sensor.brooks_space_heater_power')|float > 800 %}
+          High
+        {% elif states('sensor.brooks_space_heater_power')|float > 10 %}
+          Low
+        {% else %}
+          Off
+        {% endif %}
+
+    laundry_dryer_status:
+      friendly_name: "Laundry Dryer Status"
+      value_template: >-
+        {% if states('sensor.dryer_power_current')|float > 2 %}
+          Drying
+        {% else %}
+          Not Drying
+        {% endif %}
+
+    laundry_washer_status:
+      friendly_name: "Laundry Washer Status"
+      value_template: >-
+        {% if is_state('input_select.laundry_washer_status', 'Off') %}
+          Off
+        {% elif is_state('input_select.laundry_washer_status', 'On') %}
+          On
+        {% elif is_state('input_select.laundry_washer_status', 'Wash') %}
+          Wash
+        {% elif is_state('input_select.laundry_washer_status', 'Spin') %}
+          Spin
+        {% elif is_state('input_select.laundry_washer_status', 'Hot Water') %}
+          Hot Water
+        {% elif is_state('input_select.laundry_washer_status', 'Done') %}
+          Done
+        {% endif %}
+
+    sprinkler_status_front_yard:
+      friendly_name: "Sprinkler Status Front Yard"
+      value_template: >-
+        {% if is_state('switch.front_yard', 'on') %}
+          1
+        {% elif is_state('switch.front_yard', 'off') %}
+          0
+        {% else %}
+          -1
+        {% endif %}
+
+    sprinkler_status_along_back_house:
+      friendly_name: "Sprinkler Status Along Back House"
+      value_template: >-
+        {% if is_state('switch.along_back_house', 'on') %}
+          1
+        {% elif is_state('switch.along_back_house', 'off') %}
+          0
+        {% else %}
+          -1
+        {% endif %}  
+
+    sprinkler_status_back_fence:
+      friendly_name: "Sprinkler Status Back Fence"
+      value_template: >-
+        {% if is_state('switch.back_fence', 'on') %}
+          1
+        {% elif is_state('switch.back_fence', 'off') %}
+          0
+        {% else %}
+          -1
+        {% endif %} 
+
+    sprinkler_status_center_backyard:
+      friendly_name: "Sprinkler Status Center Backyard"
+      value_template: >-
+        {% if is_state('switch.center_backyard', 'on') %}
+          1
+        {% elif is_state('switch.center_backyard', 'off') %}
+          0
+        {% else %}
+          -1
+        {% endif %} 
+
+    sprinkler_status_south_side:
+      friendly_name: "Sprinkler Status South Side"
+      value_template: >-
+        {% if is_state('switch.south_side', 'on') %}
+          1
+        {% elif is_state('switch.south_side', 'off') %}
+          0
+        {% else %}
+          -1
+        {% endif %} 
+
+    sprinkler_status_north_side_driveway:
+      friendly_name: "Sprinkler Status North Side Driveway"
+      value_template: >-
+        {% if is_state('switch.north_side_driveway', 'on') %}
+          1
+        {% elif is_state('switch.north_side_driveway', 'off') %}
+          0
+        {% else %}
+          -1
+        {% endif %} 
+
+
+    thermostat_target_temp:
+      value_template: '{{ states.climate.thermostat.attributes.temperature }}'
+      friendly_name: 'Thermostat Target Temperature'
+      unit_of_measurement: '°F'
+
+    trash_day:
+      value_template: "{{ states('input_text.trash_day') }}"
+      friendly_name: 'Trash Day'
+    
+    media_room_harmony_hub_online:
+      value_template: >-
+        {% if states.device_tracker.media_room_harmony_hub %}
+        {% if is_state('device_tracker.media_room_harmony_hub', 'home') %}
+          Online
+        {% else %}
+          Offline
+        {% endif %}
+        {% else %}
+          Unknown
+        {% endif %}
+      friendly_name: 'Media Room Harmony Hub'
+
+    # living_room_samsung_online:
+    #   value_template: >-
+    #     {% if states.device_tracker.samsung_tv_lr_ping %}
+    #     {% if is_state('device_tracker.samsung_tv_lr_ping', 'home') %}
+    #       TV On
+    #     {% else %}
+    #       TV Off
+    #     {% endif %}
+    #     {% else %}
+    #       Unknown
+    #     {% endif %}
+    #   friendly_name: 'Living Room Samsung'
+
+    media_room_samsung_status:
+      value_template: >-
+        {% if states.device_tracker.samsung_tv_mr_ping %}
+        {% if is_state('device_tracker.samsung_tv_mr_ping', 'home') %}
+          On
+        {% else %}
+          Off
+        {% endif %}
+        {% else %}
+          Unknown
+        {% endif %}
+      friendly_name: 'Media Room Samsung'
+
+
+
+
+    # arlo_lr_base_station_armament:
+    #   value_template: >-
+    #     {% if states.alarm_control_panel.living_room_hub %}
+    #     {% if is_state('alarm_control_panel.living_room_hub', 'disarmed') %}
+    #       Disarmed
+    #     {% elif is_state('alarm_control_panel.living_room_hub', 'armed_home') %}
+    #       Armed Home
+    #     {% elif is_state('alarm_control_panel.living_room_hub', 'armed_away') %}
+    #       Armed Away
+    #     {% else %}
+    #       Other
+    #     {% endif %}
+    #     {% else %}
+    #       Unknown
+    #     {% endif %}
+    #   friendly_name: 'Arlo Living Room Mode'  
+
+    # arlo_g_base_station_armament:
+    #   value_template: >-
+    #     {% if states.alarm_control_panel.garage_hub %}
+    #     {% if is_state('alarm_control_panel.garage_hub', 'disarmed') %}
+    #       Disarmed
+    #     {% elif is_state('alarm_control_panel.garage_hub', 'armed_home') %}
+    #       Armed Home
+    #     {% elif is_state('alarm_control_panel.garage_hub', 'armed_away') %}
+    #       Armed Away
+    #     {% else %}
+    #       Other
+    #     {% endif %}
+    #     {% else %}
+    #       Unknown
+    #     {% endif %}
+    #   friendly_name: 'Arlo Garage Mode'     
+
+      
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /home
+    - type: memory_free
+    - type: swap_use_percent
+    - type: processor_use
+    - type: last_boot
+
+
+- platform: time_date
+  display_options:
+    - 'time'
+    - 'date'
+    - 'date_time'
+    - 'time_date'
+    - 'time_utc'
+    - 'beat'
+
+- platform: darksky
+  api_key: 11bc5e04e69a8a61594cd2fc1e9a00ad
+  monitored_conditions:
+    - summary
+    - temperature
+    - nearest_storm_distance
+
+
+- platform: statistics
+  name: Bottle Warmer Stats 5min
+  entity_id: sensor.bottle_warmer_power
+  max_age:
+    minutes: 5
+
+- platform: statistics
+  name: Bottle Warmer Stats 15min
+  entity_id: sensor.bottle_warmer_power
+  max_age:
+    minutes: 15
+
+
+- platform: mqtt
+  name: "Dryer Power Current"
+  state_topic: "esp_dryermon-7D77DC/SCT"
+  unit_of_measurement : "A"
+  icon: mdi:flash-circle
+
+- platform: mqtt
+  name: "DryerMon Signal"
+  state_topic: "esp_dryermon-7D77DC/RSSI"
+  unit_of_measurement: "dBm"
+ 
+
+- platform: mqtt
+  name: "DryerMon Status"
+  state_topic: "esp_dryermon-7D77DC/BUILD"
+
+
+

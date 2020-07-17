@@ -1,0 +1,122 @@
+#######################################
+#  MQTT Switches                      #
+#######################################
+
+- platform: mqtt
+  name: Garage Entry
+  state_topic: "hasshub/switch/garage_entry/state"
+  command_topic: "hasshub/switch/garage_entry/state/set"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: Kitchen Bar
+  state_topic: "hasshub/switch/kitchen_bar/state"
+  command_topic: "hasshub/switch/kitchen_bar/state/set"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: Breakfast Table
+  state_topic: "hasshub/switch/breakfast_table/state"
+  command_topic: "hasshub/switch/breakfast_table/state/set"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: Dining Room
+  state_topic: "hasshub/switch/dining_room/state"
+  command_topic: "hasshub/switch/dining_room/state/set"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: Chandelier
+  state_topic: "hasshub/switch/chandelier/state"
+  command_topic: "hasshub/switch/chandelier/state/set"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: Garage Lights
+  state_topic: "hasshub/switch/garage_lights/state"
+  command_topic: "hasshub/switch/garage_lights/state/set"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: Dining Room Outlet
+  state_topic: "hasshub/switch/dining_room_outlet/state"
+  command_topic: "hasshub/switch/dining_room_outlet/state/set"
+  payload_on: "on"
+  payload_off: "off"
+
+#######################################
+#  MQTT Garage                        #
+#######################################
+- platform: mqtt
+  name: Main Garage Door Relay Power
+  command_topic: "garage/bigdoor/sonoff-garageopener/cmnd/POWER"
+  state_topic: "garage/bigdoor/sonoff-garageopener/stat/POWER"
+  retain: true
+# - platform: mqtt
+#   name: Side Garage Door Relay Power
+#   command_topic: "garage/smalldoor/sonoff-garageopener/cmnd/POWER"
+#   state_topic: "garage/smalldoor/sonoff-garageopener/stat/POWER"
+#   retain: true
+
+#######################################
+#  MQTT Shelly                        #
+#######################################
+
+- platform: mqtt
+  name: Brooks Space Heater Outlet
+  state_topic: "shellies/shelly1pm-76B422/relay/0"
+  command_topic: "shellies/shelly1pm-76B422/relay/0/command"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: Bottle Warmer
+  state_topic: "shellies/shelly1pm-76B425/relay/0"
+  command_topic: "shellies/shelly1pm-76B425/relay/0/command"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: Master Bedroom Light
+  state_topic: "shellies/mbdrmswitch/relay/0"
+  command_topic: "shellies/mbdrmswitch/relay/0/command"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: Master Bedroom Fan
+  state_topic: "shellies/mbdrmswitch/relay/1"
+  command_topic: "shellies/mbdrmswitch/relay/1/command"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: Living Room Light
+  state_topic: "shellies/lvgrmswitch/relay/1"
+  command_topic: "shellies/lvgrmswitch/relay/1/command"
+  payload_on: "on"
+  payload_off: "off"
+
+- platform: mqtt
+  name: Living Room Fan
+  state_topic: "shellies/lvgrmswitch/relay/0"
+  command_topic: "shellies/lvgrmswitch/relay/0/command"
+  payload_on: "on"
+  payload_off: "off"
+
+#######################################
+# Broadlink Mini                      #
+#######################################
+
+- platform: broadlink
+  friendly_name: Heater Remote
+  host: 10.0.0.182
+  mac: '34:EA:34:4A:2A:94'
+  type: rm_mini

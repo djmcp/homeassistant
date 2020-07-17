@@ -1,0 +1,34 @@
+basement_media_room_tv_scene:
+  alias: Basement Media Room TV Scene
+  sequence:
+    - alias: Execute TV Lights Scene
+      service: scene.turn_on
+      entity_id: scene.basementtvlights
+    - alias: Turn on TV and put on cable
+      service: script.media_room_tv_on_cable
+basement_media_room_movie_scene:
+  alias: Basement Media Room Movie Scene
+  sequence:
+    - alias: Execute Movie Lights Scene
+      service: scene.turn_on
+      entity_id: scene.basementmovielights
+    - alias: Turn on TV and put on plex
+      service: script.media_room_tv_on_plex
+basement_party_scene:
+  alias: Basement Party Scene
+  sequence:
+    - alias: Execute Party Lights Scene
+      service: scene.turn_on
+      entity_id: scene.basementpartylights
+
+basement_shutdown_basement:
+  alias: Basement Shutdown Basement
+  sequence:
+    - alias: Turn off Basement Lights
+      service: light.turn_off
+      data:
+        entity_id: light.basement_lights
+    - alias: Turn off TV
+      service: script.media_room_tv_off
+
+

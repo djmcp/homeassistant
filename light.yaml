@@ -1,0 +1,269 @@
+#######################################
+#  MQTT Lights                        #
+#######################################
+
+#Kitchen
+- platform: mqtt
+  name: "Kitchen Cabinet"
+  state_topic: "hasshub/light/kitchen_cabinet/state"
+  command_topic: "hasshub/light/kitchen_cabinet/state/set"
+  brightness_state_topic: "hasshub/light/kitchen_cabinet/brightness"
+  brightness_command_topic: "hasshub/light/kitchen_cabinet/brightness/set"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+
+- platform: mqtt
+  name: "Deck"
+  state_topic: "hasshub/light/deck/state"
+  command_topic: "hasshub/light/deck/state/set"
+  brightness_state_topic: "hasshub/light/deck/brightness"
+  brightness_command_topic: "hasshub/light/deck/brightness/set"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+
+#Upstairs Hallway
+- platform: mqtt
+  name: "Upstairs Hallway"
+  state_topic: "hasshub/light/upstairs_hallway/state"
+  command_topic: "hasshub/light/upstairs_hallway/state/set"
+  brightness_state_topic: "hasshub/light/upstairs_hallway/brightness"
+  brightness_command_topic: "hasshub/light/upstairs_hallway/brightness/set"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+
+#Basement Stairs
+- platform: mqtt
+  name: "Basement Stairs Bottom"
+  state_topic: "hasshub/light/basement_stairs_bottom/state"
+  command_topic: "hasshub/light/basement_stairs_bottom/state/set"
+  brightness_state_topic: "hasshub/light/basement_stairs_bottom/brightness"
+  brightness_command_topic: "hasshub/light/basement_stairs_bottom/brightness/set"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+
+- platform: mqtt
+  name: "Basement Stairs Top"
+  state_topic: "hasshub/light/basement_stairs_top/state"
+  command_topic: "hasshub/light/basement_stairs_top/state/set"
+  brightness_state_topic: "hasshub/light/basement_stairs_top/brightness"
+  brightness_command_topic: "hasshub/light/basement_stairs_top/brightness/set"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+
+
+#Basement Media Room
+- platform: mqtt
+  name: "Media Room Back Left"
+  state_topic: "hasshub/light/media_room_back_left/state"
+  command_topic: "hasshub/light/media_room_back_left/state/set"
+  brightness_state_topic: "hasshub/light/media_room_back_left/brightness"
+  brightness_command_topic: "hasshub/light/media_room_back_left/brightness/set"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+
+- platform: mqtt
+  name: "Media Room Back Right"
+  state_topic: "hasshub/light/media_room_back_right/state"
+  command_topic: "hasshub/light/media_room_back_right/state/set"
+  brightness_state_topic: "hasshub/light/media_room_back_right/brightness"
+  brightness_command_topic: "hasshub/light/media_room_back_right/brightness/set"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+
+- platform: mqtt
+  name: "Media Room Center"
+  state_topic: "hasshub/light/media_room_center/state"
+  command_topic: "hasshub/light/media_room_center/state/set"
+  brightness_state_topic: "hasshub/light/media_room_center/brightness"
+  brightness_command_topic: "hasshub/light/media_room_center/brightness/set"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+
+#Basement Bar
+- platform: mqtt
+  name: "Basement Bar Left"
+  state_topic: "hasshub/light/basement_bar_left/state"
+  command_topic: "hasshub/light/basement_bar_left/state/set"
+  brightness_state_topic: "hasshub/light/basement_bar_left/brightness"
+  brightness_command_topic: "hasshub/light/basement_bar_left/brightness/set"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+
+- platform: mqtt
+  name: "Basement Bar Right"
+  state_topic: "hasshub/light/basement_bar_right/state"
+  command_topic: "hasshub/light/basement_bar_right/state/set"
+  brightness_state_topic: "hasshub/light/basement_bar_right/brightness"
+  brightness_command_topic: "hasshub/light/basement_bar_right/brightness/set"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+
+- platform: mqtt
+  name: "Basement Bar Center"
+  state_topic: "hasshub/light/basement_bar_center/state"
+  command_topic: "hasshub/light/basement_bar_center/state/set"
+  brightness_state_topic: "hasshub/light/basement_bar_center/brightness"
+  brightness_command_topic: "hasshub/light/basement_bar_center/brightness/set"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+
+#Entryway
+- platform: mqtt
+  name: "Front Porch"
+  state_topic: "hasshub/light/front_porch/state"
+  command_topic: "hasshub/light/front_porch/state/set"
+  brightness_state_topic: "hasshub/light/front_porch/brightness"
+  brightness_command_topic: "hasshub/light/front_porch/brightness/set"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+
+#Living Room
+- platform: mqtt
+  name: "Mantle"
+  state_topic: "hasshub/light/mantle/state"
+  command_topic: "hasshub/light/mantle/state/set"
+  brightness_state_topic: "hasshub/light/mantle/brightness"
+  brightness_command_topic: "hasshub/light/mantle/brightness/set"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+
+- name: led_controller_lr_1
+  platform: mqtt
+  state_topic: living_room/cabinet1/led_lights/relay/0
+  command_topic: living_room/cabinet1/led_lights/relay/0/set
+  payload_on: 1
+  payload_off: 0
+  availability_topic: living_room/cabinet1/led_lights/status
+  payload_available: 1
+  payload_not_available: 0
+  brightness_state_topic: living_room/cabinet1/led_lights/brightness
+  brightness_command_topic: living_room/cabinet1/led_lights/brightness/set
+  rgb_state_topic: living_room/cabinet1/led_lights/rgb
+  rgb_command_topic: living_room/cabinet1/led_lights/rgb/set
+  color_temp_command_topic: living_room/cabinet1/led_lights/mired/set
+  white_value_state_topic: living_room/cabinet1/led_lights/channel/3
+  white_value_command_topic: living_room/cabinet1/led_lights/channel/3/set
+
+- name: led_controller_lr_2
+  platform: mqtt
+  state_topic: living_room/cabinet2/led_lights/relay/0
+  command_topic: living_room/cabinet2/led_lights/relay/0/set
+  payload_on: 1
+  payload_off: 0
+  availability_topic: living_room/cabinet2/led_lights/status
+  payload_available: 1
+  payload_not_available: 0
+  brightness_state_topic: living_room/cabinet2/led_lights/brightness
+  brightness_command_topic: living_room/cabinet2/led_lights/brightness/set
+  rgb_state_topic: living_room/cabinet2/led_lights/rgb
+  rgb_command_topic: living_room/cabinet2/led_lights/rgb/set
+  color_temp_command_topic: living_room/cabinet2/led_lights/mired/set
+  white_value_state_topic: living_room/cabinet2/led_lights/channel/3
+  white_value_command_topic: living_room/cabinet2/led_lights/channel/3/set
+
+#######################################
+#  Groups                             #
+#######################################
+
+- platform: group
+  name: Basement Lights
+  entities:
+    - light.basement_bar_left
+    - light.basement_bar_right
+    - light.basement_bar_center
+    - light.media_room_center
+    - light.media_room_back_left
+    - light.media_room_back_right
+- platform: group
+  name: Basement Stairs
+  entities:
+    - light.basement_stairs_top
+    - light.basement_stairs_bottom
+- platform: group
+  name: Basement Bar Lights
+  entities:
+    - light.basement_bar_left
+    - light.basement_bar_right
+    - light.basement_bar_center
+- platform: group
+  name: Media Room Lights
+  entities:
+    - light.media_room_center
+    - light.media_room_back_left
+    - light.media_room_back_right
+- platform: group
+  name: Media Room Back Lights
+  entities:
+    - light.media_room_back_left
+    - light.media_room_back_right
+- platform: group
+  name: Media Room TV Lights
+  entities:
+    - light.media_room_center
+
+- platform: group
+  name: Kitchen Lights
+  entities:
+    - light.kitchen_cabinet
+    - light.do_not_use_kitchen_bar_lights
+    - light.do_not_use_breakfast_table_lights
+
+- platform: group
+  name: Living Room Cabinet Lights
+  entities:
+    - light.led_controller_lr_1
+    - light.led_controller_lr_2
+
+#######################################
+#  Templates                          #
+#######################################
+
+- platform: template
+  lights:
+    do_not_use_kitchen_bar_lights:
+      value_template: "{{ states.switch.kitchen_bar.state }}"
+      turn_on:
+        service: switch.turn_on
+        entity_id: switch.kitchen_bar
+      turn_off:
+        service: switch.turn_off
+        entity_id: switch.kitchen_bar
+- platform: template
+  lights:
+    do_not_use_breakfast_table_lights:
+      value_template: "{{ states.switch.breakfast_table.state }}" 
+      turn_on:
+        service: switch.turn_on
+        entity_id: switch.breakfast_table
+      turn_off:
+        service: switch.turn_off
+        entity_id: switch.breakfast_table
+
+
+

@@ -1,0 +1,26 @@
+#- id: garage_main_door_stop_relay
+#  alias: Garage Main Door Stop Relay
+#  trigger: 
+#  - platform: mqtt
+#    topic: 'garage/bigdoor/sonoff-garageopener/cmnd/POWER'
+#  action:
+#  - delay:
+#      seconds: 2
+#  - service: mqtt.publish
+#    data:
+#      topic: 'garage/bigdoor/sonoff-garageopener/cmnd/POWER'
+#      payload: 'OFF'
+
+#- id: garage_side_door_stop_relay
+#  alias: Garage Side Door Stop Relay
+#  trigger: 
+#  - platform: mqtt
+#    topic: 'garage/smalldoor/sonoff-garageopener/cmnd/POWER'
+#  action:
+#  - delay:
+#      seconds: 2
+#  - service: mqtt.publish
+#    data:
+#      topic: 'garage/smalldoor/sonoff-garageopener/cmnd/POWER'
+#      payload: 'OFF'
+

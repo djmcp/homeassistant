@@ -1,0 +1,78 @@
+media_room_tv_on_cable:
+  alias: Media Room TV On
+  sequence:
+    - alias: TV On
+      service: remote.send_command
+      data:
+        entity_id: remote.media_room_hub
+        device: 53158405
+        delay_secs: 2
+        command:
+          - PowerOn
+          - InputHdmi1
+
+media_room_tv_on_plex:
+  alias: Media Room TV On
+  sequence:
+    - alias: TV On
+      service: remote.send_command
+      data:
+        entity_id: remote.media_room_hub
+        device: 53158405
+        delay_secs: 2
+        command:
+          - PowerOn
+          - InputHdmi1
+    - delay:
+        seconds: 2
+    - alias: TV to plex
+      service: remote.send_command
+      data:
+        entity_id: remote.media_room_hub
+        device: 53158405
+        delay_secs: 2
+        command:    
+          - SmartHub
+          - DirectionRight
+          - DirectionRight
+          - Select
+
+media_room_pause_tv:
+  alias: Media Room Pause TV
+  sequence:
+    - alias: Pause TV
+      service: remote.send_command
+      data:
+        entity_id: remote.media_room_hub
+        device: 53158405
+        delay_secs: 2
+        command:
+          - Pause
+
+media_room_play_tv:
+  alias: Media Room Play TV
+  sequence:
+    - alias: Play TV
+      service: remote.send_command
+      data:
+        entity_id: remote.media_room_hub
+        device: 53158405
+        delay_secs: 2
+        command:
+          - Play
+
+
+media_room_tv_off:
+  alias: Media Room TV Off
+  sequence:
+    - alias: TV Off
+      service: remote.send_command
+      data:
+        entity_id: remote.media_room_hub
+        device: 53158405
+        delay_secs: 2
+        command:
+          - PowerOff
+
+
+

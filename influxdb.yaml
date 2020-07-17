@@ -1,0 +1,27 @@
+host: !secret influxdb_host
+include:
+  entities:
+    - sensor.basement_door_temperature
+    - sensor.nuc_outlet_power_sensor
+    - sensor.living_room_ec_power_sensor
+    - sensor.nordictrack_treadmill_power_sensor
+    - sensor.laundry_washer_power_sensor
+    - sensor.downstairs_temperature
+    - sensor.master_bedroom_temperature
+    - sensor.thermostat_temperature
+    - sensor.thermostat_target_temp
+    - sensor.sprinkler_status_front_yard
+    - sensor.sprinkler_status_along_back_house
+    - sensor.sprinkler_status_back_fence
+    - sensor.sprinkler_status_center_backyard
+    - sensor.sprinkler_status_south_side
+    - sensor.sprinkler_status_north_side_driveway
+    - sensor.nursery_temperature
+    - sensor.brooks_space_heater_power
+    - input_select.brooks_space_heater_control
+    - binary_sensor.brooks_space_heater_status
+    - sensor.brooks_space_heater_power_level
+    - sensor.bottle_warmer_stats_5min
+    - sensor.bottle_warmer_stats_15min
+    - sensor.bottle_warmer_power
+    - sensor.dryer_power_current

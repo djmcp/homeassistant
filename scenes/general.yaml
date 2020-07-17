@@ -1,0 +1,26 @@
+- name: Good Night
+  entities: 
+    input_select.whole_house_scene: 'Good Night'
+
+- name: Good Morning
+  entities: 
+    input_select.whole_house_scene: 'Good Morning'
+
+- name: Brooks Bedtime
+  entities: 
+    input_select.whole_house_scene: 'Brooks Bedtime'
+
+- name: Vacation On
+  entities:
+    input_boolean.vacation_mode:
+      state: 'on'
+      
+- name: Vacation Off
+  entities:
+    input_boolean.vacation_mode:
+      state: 'off'
+
+- name: Dog Bathroom
+  entities:
+    input_boolean.dog_bathroom_time:
+      state: 'on'

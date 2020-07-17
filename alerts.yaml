@@ -1,0 +1,43 @@
+garage_entry_door_battery:
+  name: Garage Entry Door Battery is LOW
+  entity_id: binary_sensor.garage_entry_door_battery_low
+  repeat: 30
+  notifiers:
+    - ios_petes_iphone
+back_door_battery:
+  name: Back Door Battery is LOW
+  entity_id: binary_sensor.back_door_battery_low
+  repeat: 30
+  notifiers:
+    - ios_petes_iphone
+front_door_battery:
+  name: Front Door Battery is LOW
+  entity_id: binary_sensor.front_door_battery_low
+  repeat: 30
+  notifiers:
+    - ios_petes_iphone
+# arlo_disarmed:
+#   name: Arlo is disarmed
+#   entity_id: sensor.arlo_base_station_armament
+#   state: Disarmed
+#   repeat: 60
+#   can_acknowledge: true
+#   skip_first: true
+#   notifiers:
+#     - ios_petes_iphone
+# garage_main_door_open:
+#   name: Garage Main Door Open
+#   entity_id: binary_sensor.garage_main_door_open
+#   repeat: 30
+#   can_acknowledge: true
+#   skip_first: true
+#   notifiers:
+#     - ios_petes_iphone
+deep_freeze_door_open:
+  name: Deep Freeze Door is still open
+  entity_id: binary_sensor.deep_freeze_opened
+  repeat: 1
+  can_acknowledge: true
+  skip_first: true
+  notifiers:
+    - ios_petes_iphone

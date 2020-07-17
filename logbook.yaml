@@ -1,0 +1,44 @@
+exclude:
+  domains:
+    - group
+    - input_text
+  entities:
+    - sensor.pws_alerts
+    - sensor.pws_feelslike_f
+    - sensor.pws_heat_index_f
+    - sensor.pws_location
+    - sensor.pws_precip_1d
+    - sensor.pws_temp_high_1d_f
+    - sensor.pws_temp_low_1d_f
+    - sensor.pws_weather_1d
+    - sensor.pws_weather_1n
+    - sensor.pws_weather_2d
+    - sensor.pws_weather_2n
+    - sensor.disk_used_home
+    - sensor.ram_available
+    - sensor.swap_used
+    - sensor.cpu_used
+    - sensor.last_boot
+    - sensor.since_last_boot
+    - automation.motion_back_door
+    - automation.keep_broadlink_alive
+    - automation.basement_turn_off_lights
+    - binary_sensor.back_deck_camera_motion
+    - light.bar_left
+    - light.bar_right
+    - light.bar_center
+    - light.media_room_center
+    - light.media_room_back_left
+    - light.media_room_back_right
+    - light.media_room_back_lights
+    - light.media_room_tv_lights
+    - binary_sensor.basement_motion
+    - sensor.internet_time
+    - sensor.time
+    - sensor.time_utc
+    - sensor.date_time
+    - sensor.time_date
+    - light.led_controller_lr_1
+    - light.led_controller_lr_2
+    - light.do_not_use_kitchen_bar_lights
+    - light.do_not_use_breakfast_table_lights

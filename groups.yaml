@@ -1,0 +1,428 @@
+###############################
+#                             #
+#            TABS             #
+#                             # 
+###############################
+
+default_view:
+  icon: mdi:home
+  entities: 
+    #- group.home_status
+    - group.climate
+    - group.locks
+    - camera.usps_mail
+    - group.alerts
+    - group.garage
+
+downstairs:
+  name: Downstairs
+  #icon: mdi:sofa
+  entities: 
+    - group.kitchen
+    - group.living_room
+    - group.entry
+    - group.garage_entry
+    - group.downstairs_media
+
+basement:
+  name: Basement
+  entities:
+    - group.basement_lights
+
+
+
+upstairs:
+  name: Upstairs 
+  #icon: mdi:hotel
+  entities:
+    - group.climate
+    - group.master_bedroom
+    - group.upstairs_hallway
+    - group.laundry_room
+
+cameras:
+  name: cameras
+  icon: mdi:camera
+  entities:
+    - alarm_control_panel.home_alarm
+    - alarm_control_panel.living_room_hub
+    - alarm_control_panel.garage_hub
+    - input_select.arlo_garage_status
+    - input_select.arlo_lr_status
+    - group.garage_cam_settings
+    - camera.garage_wyze
+    - group.arlo_camera_last_images
+    - camera.garage_cam
+
+people:
+  name: people
+  icon: mdi:account-multiple
+  entities:
+    - group.mcdowells
+    - group.mcdowells_map
+    - input_select.whole_house_scene
+    - input_select.guest_mode
+
+media_players:
+  name: media media players 
+  icon: mdi:television
+  entities:
+    - media_player.media_room
+
+weather:
+  name: Weather
+  icon: mdi:weather-partlycloudy
+  entities:
+    - group.current_weather
+    - group.daily_forecast
+    - group.all_weather
+    - light.Living_room_Cabinet1
+    - light.LED_CONTROLLER_LR_2
+
+security:
+  name: Security
+  icon: mdi:lock
+  entities:
+    - group.door_sensors
+    - group.window_sensors
+
+automations:
+  icon: mdi:dip-switch
+  entities:
+    - group.boolean_switches
+    - group.all_automations
+    - group.hass_reload
+    - group.hass_resources
+    - group.all_scenes
+    - group.outlets
+    - group.timers
+
+
+
+###############################
+#                             #
+#           CARDS             #
+#                             # 
+###############################
+
+climate:
+  name: Climate
+  entities:
+    - climate.thermostat
+    - sensor.bedroom_wink_relay_temperature
+    - sensor.kitchen_wink_relay_temperature
+    - sensor.avg_house_temp
+    - sensor.avg_upstairs_temp
+
+house_temp:
+  name: House Temperature
+  entities:
+    - sensor.bedroom_wink_relay_temperature
+    - sensor.kitchen_wink_relay_temperature
+    - sensor.thermostat_temp
+
+home_status:
+  name: Home Status
+  entities:
+    - input_select.home_status
+    - group.McDowells
+    - input_boolean.vacation_mode
+
+garage:
+  name: Garage
+  entities:
+    - cover.main_garage_door
+    - cover.side_garage_door
+
+alerts:
+  name: alerts
+  entities:
+    - alert.front_door_battery
+    - alert.back_door_battery
+    - alert.garage_entry_door_battery
+    - alert.garage_main_door_open
+
+    
+mcdowells:
+  name: The McDowells
+  entities:
+    - device_tracker.pete_petes_iphone
+    - device_tracker.jessi_jessis_iphone
+    - device_tracker.petes_iphone_router
+    - device_tracker.jessis_iphone_router
+
+mcdowells_map:
+  name: McDowells Map
+  entities:
+    - camera.jessi_location
+    - camera.pete_location
+
+locks:
+  name: Locks
+  entities:
+    - lock.back_door
+    - lock.front_door
+    - lock.garage_entry_door
+
+entry:
+  name: Entry
+  entities:
+    - lock.front_door
+    - light.entry_lamp
+    - switch.christmas_tree
+    - switch.chandelier
+    - light.front_porch
+
+living_room:
+  name: Living Room
+  entities:
+    - switch.living_room_light
+    - switch.living_room_fan
+    - light.mantle
+    - sensor.living_room_samsung_online
+    - sensor.media_room_samsung_online
+
+
+downstairs_media:
+  name: Downstairs Media
+  entities:
+    #- media_player.living_room_tv
+    #- media_player.living_room_cc
+
+kitchen:
+  name: Kitchen
+  entities:
+    - switch.breakfast_table_light
+    - light.kitchen
+    - light.deck_light
+    - lock.back_door
+
+garage_entry:
+  name: Garage Entry 
+  entities:
+    - switch.garage_entry
+    - lock.garage_entry_door
+
+basement_lights:
+  name: Basement Lights
+  entities:
+    - light.basement_lights
+    - light.bar_lights
+    - light.media_room_lights
+    - light.basement_stairs
+    - light.basement_stairs_top
+    - light.basement_stairs_bottom
+
+
+master_bedroom:
+  name: Master Bedroom
+  entities:
+    - switch.master_bedroom_fan
+    - switch.master_bedroom_light
+    - switch.master_bedroom_lamp
+
+upstairs_hallway:
+  name: Upstairs Hallway
+  entities:
+    - light.upstairs_hallway
+
+laundry_room:
+  name: Laundry Room
+  entities:
+    - sensor.dryer_status
+
+current_weather:
+  name: Current Weather
+  entities:
+    - sensor.pws_temp_f
+    - sensor.pws_feelslike_f
+
+daily_forecast:
+  name: Daily Forecast
+  entities:
+    - sensor.pws_weather_1d
+    - sensor.pws_weather_1n
+    - sensor.pws_weather_2d
+    - sensor.pws_weather_2n
+
+all_weather:
+  name: All Weather
+  entities:
+    - sensor.pws_alerts
+    - sensor.pws_feelslike_f
+    - sensor.pws_heat_index_f
+    - sensor.pws_location
+    - sensor.pws_precip_1d
+    - sensor.pws_temp_f
+    - sensor.pws_temp_high_1d_f
+    - sensor.pws_temp_low_1d_f
+    - sensor.pws_weather_1d
+    - sensor.pws_weather_1n
+    - sensor.pws_weather_2d
+    - sensor.pws_weather_2n
+
+sleep_switches:
+  name: Sleep Switches
+  entities:
+    - switch.living_room_lamp
+    - switch.breakfast_table_light
+    - switch.living_room_light
+
+sleep_lights:
+  name: Sleep Lights
+  entities:
+    - light.entry_lamp  
+    - light.mantle
+    - light.deck_light
+
+downstairs_light_switches:
+  name: Downstairs Light Switches
+  entities:
+    - switch.breakfast_table_light
+    - switch.living_room_light
+
+
+upstairs_light_switches:
+  name: Upstairs Light Switches
+  entities:
+    - switch.master_bedroom_light
+
+boolean_switches:
+  name: Boolean Switches
+  entities:
+    - input_select.home_status
+    - input_boolean.empty_house
+    - input_boolean.jessi_home
+    - input_boolean.pete_home
+    - input_boolean.vacation_mode
+    - input_boolean.motion_front_door
+    - input_boolean.motion_back_door
+    - input_boolean.motion_living_room
+    - input_boolean.volume_up
+    - input_boolean.volume_down
+    - input_boolean.lr_plex_pause
+    - input_boolean.lr_plex_play
+    - binary_sensor.basement_motion
+    - input_boolean.arlo_lr_arm_active
+    - input_boolean.arlo_lr_disarm_active
+    - input_boolean.arlo_lr_home_active
+    - input_boolean.arlo_lr_sleep_active
+    - input_boolean.arlo_g_arm_active
+    - input_boolean.arlo_g_disarm_active
+    - input_boolean.basement_tv_scene
+    - input_boolean.basement_movie_scene
+    - input_boolean.good_night
+    - input_boolean.dog_bathroom_time
+    - input_boolean.basement_bedroom
+    - binary_sensor.pete_phone_charger_charging
+    - binary_sensor.jessi_phone_charger_charging
+
+
+outlets:
+  name: Outlets
+  entities:
+    - switch.wink_outlet
+
+
+hass_resources:
+  name: HASS Resources
+  entities:
+    - sensor.disk_use_percent
+    - sensor.memory_free
+    - sensor.swap_use_percent
+    - sensor.processor_use
+    - sensor.last_boot
+    - sensor.since_last_boot
+
+hass_reload:
+  name: Home Assistant Config
+  entities:
+    - script.zhass_reload_configs
+    - script.zhass_restart_hass
+
+all_scenes:
+  name: All Scenes
+  entities:
+    - scene.good_morning
+    - scene.good_night
+    - scene.vacation_on
+    - scene.vacation_off
+    - scene.basementtvlights
+    - scene.Basementmovielights
+
+timers:
+  name: Timers
+  entities:
+    - timer.front_porch_dim
+
+arlo_camera_last_images:
+  name: Arlo Last Images
+  entities:
+    - camera.front_porch_last_motion
+    - camera.driveway_last_motion
+    - camera.living_room_last_motion
+    - camera.back_deck_last_motion
+    - camera.basement_last_motion
+
+
+door_sensors:
+  name: Door Sensors
+  entities:
+    - binary_sensor.front_door_opened
+    - binary_sensor.back_door_opened
+    - binary_sensor.garage_entry_door_opened
+
+
+window_sensors:
+  name: Window Sensors
+  entities:
+    - binary_sensor.left_dining_window_opened
+    - binary_sensor.middle_dining_window_opened
+    - binary_sensor.right_dining_window_opened
+    
+
+#basement_all_lights:
+#  name: Basement All Lights
+#  
+#  control: hidden
+#  entities:
+#    - group.basement_media_room_lights
+#    - group.basement_bar_lights
+
+#basement_bar_lights:
+#  name: Basement Bar Lights
+#  
+#  control: hidden
+#  entities:
+#    - light.bar_left
+#    - light.bar_right
+#    - light.bar_center
+
+#basement_media_room_lights:
+#  name: Basement Media Room Lights
+#  
+#  control: hidden
+#  entities:
+#    - group.basement_media_room_tv_lights
+#    - group.basement_media_room_back_lights
+
+#basement_media_room_tv_lights:
+#  name: Basement TV Lights
+#  
+#  control: hidden
+#  entities:
+#    - light.media_room_center
+
+#basement_media_room_back_lights:
+#  name: Basement Back Media Room Lights
+#  
+#  control: hidden
+#  entities:
+#    - light.media_room_back_left
+#    - light.media_room_back_right
+
+    
+
+
+
+

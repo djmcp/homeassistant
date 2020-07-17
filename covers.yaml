@@ -1,0 +1,22 @@
+- platform: mqtt
+  name: "Main Garage Door"
+  state_topic: "garage/bigdoor/2/cmnd/POWER2"
+  command_topic: "garage/bigdoor/sonoff-garageopener/cmnd/POWER"
+  payload_open: "ON"
+  payload_close: "ON"
+  payload_stop: "ON"
+  state_open: "OFF"
+  state_closed: "ON"
+  optimistic: false
+  retain: false
+- platform: mqtt
+  name: "Side Garage Door"
+  state_topic: "garage/sidedoor/2/cmnd/POWER2"
+  command_topic: "garage/sidedoor/sonoff-garageopener/cmnd/POWER"
+  payload_open: "ON"
+  payload_close: "ON"
+  payload_stop: "ON"
+  state_open: "ON"
+  state_closed: "OFF"
+  optimistic: false
+  retain: false

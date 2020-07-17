@@ -1,0 +1,29 @@
+# general_good_night:
+#   alias: Good_Night
+#   sequence:
+#   - alias: Lock all doors
+#     data:
+#       entity_id: group.all_locks
+#     service: lock.lock
+#   - alias: Turn off sleep switches
+#     data:
+#       entity_id: group.sleep_switches
+#     service: switch.turn_off
+#   - alias: Turn off sleep lights
+#     data:
+#       entity_id: group.sleep_lights
+#     service: light.turn_off
+#   - alias: Call Arlo Away Mode
+#     data: {}
+#     service: script.presence_lr_arlo_away_mode
+
+
+# general_good_morning:
+#   alias: Good_Morning
+#   sequence:
+#   - alias: Call Arlo Home Mode
+#     data: {}
+#     service: script.presence_lr_arlo_home_mode
+#   - alias: Call Good Morning TV
+#     data: {}
+#     service: script.good_morning_tv

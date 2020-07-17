@@ -1,0 +1,137 @@
+#TV Stuff
+volume_down:
+  alias: Turn Volume Down
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgCgAJOWEBEPEg8SDxIPMg8yDxIPEg8yEDEPMg8yDxIPEg8SDxIPlREQEBEQERARDxIQEQ8SDzIPMg8yDzIPEg8yDzIPMhARDxIPEg8SEDEPAAffk5UQERARDxIPEg8yDzIQEQ8SDzIPMg8yDzIQEQ8SDxIPEg+WEBEPEg8REBEQERAREBEQMRAxEDEQMRAREDEQMRAxEBEQERAREBEQMRAADQUAAAAAAAAAAA=="
+ 
+volume_up:
+  alias: Turn Volume Up
+  sequence: 
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgCgAJSVEBEPEg8SDxIPMg8yDxIPEg8yDzIPMg8yDxIPEg8SDxIPlREQEBEQERAREDEQMREwEBEQMRAxEDEQERAREBEQERAxEBEQERAREDEQAAfek5UREBAREBEQERAxEDEQERAREDEQMRAxEDEQERAREBEQERCVEBEPEg8SDxIPMg8yDzIPEg8yDzIPMhARDxIPEg8SDzIPEg8SDxIPMhAADQUAAAAAAAAAAA=="
+          
+tv_channel_1:
+  alias: Channel 1
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBQAAgdBzgGGgVeByoIKgYnBlkGAAHHCB0FWgcYBhoFGgYfBhoGGQYAClYHHgc4BhkGXgcqBysGJwZZBwABxgUfBjUIOgoYBRoGHwYZBhoGAA0FAAAAAAAAAAA=="          
+          
+tv_channel_2:
+  alias: Channel 2
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBQAAYfBToHGQVeBisGLAYnBlkIAAHFBx4FVAYaBhoFGgYjBhoGGgUAClYGHwU6BhkGXgcqBiwFKAZZBwABxgcdBjEHPQUaBhoGIwYaBRoGAA0FAAAAAAAAAAA=="          
+
+tv_channel_3:
+  alias: Channel 3
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBQAAcdBzkHGAZdCSkGKwgmB1gHAAHFCB0GUAcYBhoGGQYoBhkGGgYAClUIHQY5CBgGXQgqByoIJgVaBwABxQceBiwHPAcZBhkGKAUaCBgGAA0FAAAAAAAAAAA=="          
+
+tv_channel_4:
+  alias: Channel 4
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBQAAkcBjkJFwZdBiwHKgYnBlkGAAHHCRwGSwcZBRoGGgYsBRoGGgYAClUGHwc4BxkHXAcqBiwGJwZZBgABxwYfBSgGPgcYBhoHKggYBhoFAA0FAAAAAAAAAAA=="          
+
+tv_channel_5:
+  alias: Channel 5
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBQAAgdBjkIGAZdBiwHKgcmBlkGAAHGCxsGRwcYBhoHGQUxBhoGGgUAClYHHgU6BxkFXgYrBiwHJghXBgABxwYfBSQFPgYaBhkGMQYaBhkGAA0FAAAAAAAAAAA=="          
+
+tv_channel_6:
+  alias: Channel 6
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBQAAgdBjkHGQZdBiwHKgYnCVYJAAHEChsHQQcYBhoGGQY1BhoGGgcAClQIHQY5BxkFXgcqBiwHJgZZBgABxwceBh4GPgcZBRoGNQYaBRoGAA0FAAAAAAAAAAA=="          
+
+tv_channel_7:
+  alias: Channel 7
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBQAAYeBjoFGgZdCCoGLAUoBlkIAAHECB0GPgYZBhoGGgU6BhoFGgYAClUIHQY5BhoGXQgqByoIJgdYBgABxggdBxkGPQYYBxsFOgYZBhoGAA0FAAAAAAAAAAA=="          
+
+tv_channel_8:
+  alias: Channel 8
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBQAAgdBzgHGQZdBysFLAcmBlkGAAHHCB0FOgYaBRoGGgY9BhoHGQUAClYHHgY5BxkFXgcqCCoGJwhXBgABxwYfBV4HPAYaBhoFPgYaBhkGAA0FAAAAAAAAAAA=="          
+
+tv_channel_9:
+  alias: Channel 9
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBQAAYfBjkGGgdcByoGLAYnCFcIAAHFBh8GNQcYBhoGGgVCBhoGGgYAClUGHwY5BxkFXgcqBiwGJwZZBwABxgceBlkHPAYaBRoGQgcZBRoGAA0FAAAAAAAAAAA=="          
+
+tv_channel_0:
+  alias: Channel 0
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBQAAceBjoFGgZdCCoGKwYoB1gHAAHFCB0HXAYaBhoFGgYaBhkGGgYAClUIHQY5CBgGXQcrCCkGKAVZCAABxQkcBjkGPgYZCBgGGgUaBhoGAA0FAAAAAAAAAAA=="         
+
+tv_ok:
+  alias: OK Button
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgB4AAgdBzgGGgVeCCkIKQokBlkHAAHGBx4FPgcZBRoGJAUxBhoGGQYAClYGHgg4BRoGXQgqBysFKAZZBgABxggdBhoGPQYaBiMGMQcZBRoGAAFuCB0HOAYaBl0HKwcqCCYFWQYAAccGHwYjBxkFGgZZB1wIGAYaBQANBQ=="
+
+tv_power:
+  alias: TV Power Button
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgCMAJSVETkROBI4ERQSExEUERQRFBE4ETkROREUERMTEhEUERQRFBE5ERMSExITERQSExEUEjcTEhI4ETkRORE4ETkROREABgWTlhI3ETkROREUERMSExITERQRORE4EjgSExITEhMRFBETEhMSOBEUERQRFBEUERMSExI4ERQROBM3ETkRORI3ETkSAA0FAAAAAAAAAAAAAAAA=="
+
+tv_sound_power:
+  alias: Sound Power Button
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgCgAJSUEBEQERAREBEQMhAyEBEQERAyDzMPMw8zDxIPEg8SDxIPlg8SDxIPEg8SDxIPEg8SDxIPMw8yEDIQERAyEDIQMhAyEBEQERAREDIQAAcflJQREBAREBEQERAyEDIQERAREDIQMhAyEDIPEg8SDxIPEg=="
+
+tv_hdmi1:
+  alias: TV HDMI1
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBGAJKVETkRORE5ERQQFRAVERQQFRE5ETkROREUERQRFBEUERQRORAVERUPOxAVDzsQOhA6EBUQOhA6EBUQOhAVEBUPFhAADQUAAA=="
+
+tv_keep_alive:
+  alias: Send blank to Broadlink
+  sequence:
+    - service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "=="
+

@@ -1,0 +1,36 @@
+arlo_lr_arm:
+  alias: Living Room Arm
+  sequence:
+    - event: CHANGE_LR_ARLO_MODE
+      event_data:
+        source: "mode1"
+arlo_lr_disarm:
+  alias: Living Room Disarm
+  sequence:
+    - event: CHANGE_LR_ARLO_MODE
+      event_data:
+        source: "mode0"
+arlo_lr_home:
+  alias: Living Room Home
+  sequence:
+    - event: CHANGE_LR_ARLO_MODE
+      event_data:
+        source: "mode2"
+arlo_lr_sleep:
+  alias: Living Room Sleep
+  sequence:
+    - event: CHANGE_LR_ARLO_MODE
+      event_data:
+        source: "mode3"
+arlo_g_arm:
+  alias: Garage Arm
+  sequence:
+    - event: CHANGE_G_ARLO_MODE
+      event_data:
+        source: "mode1"
+arlo_g_disarm:
+  alias: Garage Disarm
+  sequence:
+    - event: CHANGE_G_ARLO_MODE
+      event_data:
+        source: "mode0"

@@ -1,0 +1,204 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_lat
+  longitude: !secret home_long
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 329
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Chicago
+
+  customize: !include customize.yaml
+  external_url: !secret external_url
+  internal_url: "http://10.0.0.135:8123"
+
+  # add this part
+  auth_providers:
+    - type: homeassistant
+    - type: trusted_networks
+      trusted_networks:
+        - 10.0.0.0/24
+        - 10.0.0.135
+
+#############################
+# TURN ON CORE STUFF        #
+############################# 
+logger:
+  default: info
+  # logs:
+    # homeassistant.components.homekit: debug
+    # homeassistant.components.ping: debug
+    # pynetgear: debug
+    # homeassistant.components.netgear.device_tracker: debug
+    # pyhap: debug
+    # pyhap.accessory_driver: debug
+    # wink: debug
+    # pywink.api: debug
+    # pubnub: debug
+    # pyecobee: debug
+    # homeassistant.components.ecobee: debug
+    # homeassistant.components.mobile_app: debug
+
+
+# Setup DEFAULT_CONFIG
+default_config:
+
+
+
+# Show links to resources in log and frontend
+#introduction:
+
+
+# Enables the frontend
+frontend:
+  javascript_version: latest
+  themes: !include themes.yaml
+
+# Enables configuration UI
+config:
+
+#python_script:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  #api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+  #ssl_certificate: /ssl/fullchain.pem
+  #ssl_key: /ssl/privkey.pem
+
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+system_health:
+
+conversation:
+
+history:
+
+recorder:
+  db_url: !secret recorder_db
+  purge_keep_days: 3
+
+sun:
+
+
+#############################
+# INCLUDES                  #
+#############################
+group: !include groups.yaml
+#notify: !include notify.yaml
+automation: !include_dir_merge_list automations/
+script: !include_dir_merge_named scripts/
+sensor: !include sensors.yaml
+input_select: !include misc/input_select.yaml
+input_boolean: !include misc/input_boolean.yaml
+input_text: !include misc/input_text.yaml
+scene: !include_dir_merge_list scenes/
+cloud: !include cloud.yaml
+light: !include light.yaml
+lock: !include lock.yaml
+logbook: !include logbook.yaml
+switch: !include switches.yaml
+cover: !include covers.yaml
+binary_sensor: !include binary_sensors.yaml
+alert: !include alerts.yaml
+timer: !include timer.yaml
+#panel_custom: !include panel_custom.yaml
+remote: !include remote.yaml
+ios: !include ios.yaml
+camera: !include camera.yaml
+device_tracker: !include device_tracker.yaml
+influxdb: !include influxdb.yaml
+#tplink: !include tplink.yaml
+homekit: !include homekit.yaml
+
+
+#############################
+# Enable some randoms       #
+#############################
+person:
+
+ecobee:
+  api_key: !secret ecobee_api_key
+
+ffmpeg:
+
+ifttt:
+  key: !secret ifttt_key
+
+# zone:
+#   - name: Home
+#     latitude: !secret home_lat
+#     longitude: !secret home_long
+#     radius: 150
+#     icon: mdi:home
+#   - name: LPD
+#     latitude: !secret lpd_lat
+#     longitude: !secret lpd_long
+#     radius: 250
+#     icon: mdi:city
+#   - name: Continuous
+#     latitude: !secret cc_lat
+#     longitude: !secret cc_long
+#     radius: 250
+#     icon: mdi:city
+
+tts:
+  - platform: google_translate
+    service_name: google_say
+
+# mqtt:
+#   broker: !secret mqtt_broker
+#   username: !secret mqtt_username
+#   password: !secret mqtt_password
+#   discovery: true
+
+owntracks:
+  max_gps_accuracy: 200
+  waypoints: true
+  waypoint_whitelist:
+    - pete
+    - jessi
+    - petes_iphone
+    - jessis_iphone
+
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
+  track_new_calendar: false
+
+lutron_caseta:
+  host: 10.0.0.80
+  keyfile: caseta.key
+  certfile: caseta.crt
+  ca_certs: caseta-bridge.crt
+
+
+#media_player:
+#  - platform: plex
+#  - platform: alexa
+#    email: !secret amazon_user
+#    password: !secret amazon_pass
+#    url: amazon.com
+
+#  - platform: samsungtv
+#    name: Living Room TV
+#    mac: 68:27:37:55:85:6E
+#    host: 10.0.0.111
+#    port: 8001
+
+#############################
+# Disable some randoms      #
+#############################
+#usps:
+#    username: !secret usps_user
+#    password: !secret usps_pass
+

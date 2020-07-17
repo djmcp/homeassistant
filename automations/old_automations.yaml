@@ -1,0 +1,111 @@
+
+
+- id: 'christmas_tree_on'
+  alias: Christmas_Tree_On
+  initial_state: false
+  trigger:
+  - event: sunrise
+    offset: -00:15:00
+    platform: sun
+  condition: []
+  action:
+  - alias: Turn on Christmas Tree
+    data:
+      entity_id: switch.christmas_tree
+    service: switch.turn_on
+
+- id: 'christmas_tree_off'
+  alias: Christmas_Tree_Off
+  initial_state: false
+  trigger:
+  - at: '23:00'
+    platform: time
+  condition: []
+  action:
+  - alias: Turn off Christmas Tree
+    data:
+      entity_id: switch.christmas_tree
+    service: switch.turn_off
+
+- id: 'send_to_hasstts'
+  alias: Send to HASSTTS
+  trigger:
+  - platform: state
+    entity_id: input_text.hasstts_say
+  action:
+  - service: mqtt.publish
+    data_template: 
+      topic: 'hass/input_text/hasstts_say/state'
+      payload: '{{ states("input_text.hasstts_say") }}'
+  - service: input_text.set_value
+    data:
+      entity_id: input_text.hasstts_say
+      value: ''
+
+
+#- id: 'motion_back_door'
+#  alias: Motion_Back_Door
+#  trigger:
+#  - entity_id: binary_sensor.back_deck_camera_motion
+#    from: 'off'
+#    platform: state
+#    to: 'on'
+#  condition:
+#    condition: and
+#    conditions: 
+#      - condition: state
+#        entity_id: sun.sun
+#        state: below_horizon
+#      - condition: state
+#        entity_id: light.deck_light
+#        state: 'off'
+#  action:
+#  - alias: Turn on Back Deck
+#    data:
+#      entity_id: light.deck_light
+#    service: light.turn_on
+#  - delay: 00:00:01
+#  - alias: Turn on Back Deck
+#    data:
+#      entity_id: light.deck_light
+#      brightness: 210
+#    service: light.turn_on
+#  - delay: 00:00:01
+#  - alias: Turn on Back Deck
+#    data:
+#      entity_id: light.deck_light
+#      brightness: 210      
+#    service: light.turn_on
+#  - delay: 00:02:00
+#  - alias: Turn off Back Deck
+#    data:
+#      entity_id: light.deck_light
+#    service: light.turn_off
+#  - delay: 00:00:01
+#  - alias: Turn off Back Deck
+#    data:
+#      entity_id: light.deck_light
+#    service: light.turn_off
+#  - delay: 00:00:01
+#  - alias: Turn off Back Deck
+#    data:
+#      entity_id: light.deck_light
+#    service: light.turn_off
+
+
+#- alias: 'Arlo Motion Detection'
+#  trigger:
+#    platform: event
+#    event_type: ARLO_MOTION_DETECTED
+#  action:
+#  - delay:
+#      seconds: '45'
+#  - alias: send ios notification
+#    service: script.notify_petes_iphone_jpeg_template
+#    data_template:
+#      notify_title: "Motion at home"
+#      notify_message: "Motion Detected on {{ trigger.event.data.cam }}"
+#      notify_url: "{{ states(trigger.event.data.url) }}"
+#      content_type: jpeg
+#      hide_thumb: false
+    

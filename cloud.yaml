@@ -1,0 +1,55 @@
+alexa:
+  filter:
+    exclude_entities:
+      - light.basement_bar_center
+      - light.basement_bar_left
+      - light.basement_bar_right
+      - light.media_room_back_left
+      - light.media_room_back_right
+      - light.media_room_center
+      - switch.main_garage_door_relay_power
+      - switch.side_garage_door_relay_power
+      - switch.wink_outlet
+      - light.basement_stairs_top
+      - light.basement_stairs_bottom
+      - switch.jessi_phone_charger
+      - switch.pete_phone_charger
+      - switch.garage_wyze_ir_led
+      - switch.garage_wyze_h264_rtsp_server
+      - switch.garage_wyze_yellow_led
+      - switch.garage_wyze_night_mode
+      - switch.garage_wyze_motion_detection
+      - switch.garage_wyze_blue_led
+      - cover.garage_wyze_move_updown
+      - switch.garage_wyze_ir_filter
+      - switch.garage_wyze_night_mode_auto
+      - switch.garage_wyze_mjpeg_rtsp_server
+      - switch.nuc_outlet
+      - light.do_not_use_kitchen_bar_lights
+      - light.do_not_use_breakfast_table_lights
+      - light.led_controller_lr_1
+      - light.led_controller_lr_2
+      - switch.mcdowellrachio_in_standby_mode
+      - switch.laundry_washer
+      - switch.front_yard
+      - switch.along_back_house
+      - switch.north_side_driveway
+      - switch.center_backyard
+      - switch.back_fence
+      - switch.south_side
+      - switch.living_room_ec
+      - switch.bottle_warmer
+      - switch.brooks_space_heater_outlet
+      - switch.brooks_snoo_outlet
+      - cover.main_garage_door
+    exclude_domains:
+      - automation
+      - script
+      - alert
+      - input_boolean
+      - binary_sensor
+      - media_player
+      - group
+      - sensor
+      - climate
+      - timer
