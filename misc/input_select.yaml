@@ -104,3 +104,9 @@ bottle_warmer_status:
 #     - Turn Off
 #     - Mute
 #     - Idle
+
+ha_git_update:
+  name: HA Git Update
+  options:
+    - 'Git Pull'
+    - 'Git Pull HA Restart'
