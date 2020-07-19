@@ -41,7 +41,6 @@ logger:
     # pyecobee: debug
     # homeassistant.components.ecobee: debug
     # homeassistant.components.mobile_app: debug
-    # this is a test222
 
 
 # Setup DEFAULT_CONFIG
