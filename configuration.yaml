@@ -120,6 +120,8 @@ device_tracker: !include device_tracker.yaml
 influxdb: !include influxdb.yaml
 #tplink: !include tplink.yaml
 homekit: !include homekit.yaml
+shell_command: !include shell_command
+
 
 
 #############################
