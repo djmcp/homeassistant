@@ -27,3 +27,4 @@ harmony_*
 !.gitignore
 !.HA_VERSION
 !/.storage/lovelace
+!.travis.yml
