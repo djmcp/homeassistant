@@ -110,3 +110,4 @@ ha_git_update:
   options:
     - 'Git Pull'
     - 'Git Pull HA Restart'
+    - 'Idle'
