@@ -1,13 +1,31 @@
+#
+# Travis CI configuration
+#
+# Simply tests that Home Assistant configuration is valid.
+#
+# @link https://docs.travis-ci.com/user/tutorial/
+# @link https://www.home-assistant.io/docs/ecosystem/backup/backup_github/#step-7-configuration-file-testing
+#
+
+# Select the base environment
 language: python
-cache: pip
 python:
-  - "3.5"
+  - "3.7"
+
+# Enable Travis caching of Python Packages (per branch)
+cache: pip
+
+# Prepare the CI environment to support Home Assistant
+before_install:
+  - mv secrets_travis.yaml secrets.yaml
+  - touch home-assistant_v2.db
+  - touch home-assistant.log
+  - HA_VERSION=$(<.HA_VERSION)
+
+# Install Home Assistant
 install:
-  - "pip3 install homeassistant"
+  - pip3 install homeassistant==${HA_VERSION}
+
+# Test configuration files
 script:
-  - "mv secrets.yaml.sample secrets.yaml"
-  - "touch fullchain.pem"
-  - "touch privkey.pem"
-  - "hass --version"
-  - "hass -c . --script check_config | tee check.output"
-  - '! less check.output | grep -q "Failed config"'
+  - hass --script check_config --config . --files
