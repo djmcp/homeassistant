@@ -67,3 +67,6 @@ hass_cast_off:
 
 hass_cast_cameras:
   name: HASS Cast Cameras
+
+ha_git_pull:
+  name: HA Git Pull
