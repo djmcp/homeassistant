@@ -1,0 +1,23 @@
+# Whitelist
+!storage/lovelace
+
+# Ignore extensions
+*.db
+*.log
+
+# Ignore folders.
+.storage
+.cloud
+.google.token
+appdaemon
+homebridge
+ssh
+utilities
+
+
+# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
+harmony_*
+._*
