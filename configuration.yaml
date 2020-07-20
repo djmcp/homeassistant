@@ -29,6 +29,8 @@ homeassistant:
 logger:
   default: info
   # logs:
+    homeassistant.components.travisci.sensor: debug
+    travispy: debug
     # homeassistant.components.homekit: debug
     # homeassistant.components.ping: debug
     # pynetgear: debug
