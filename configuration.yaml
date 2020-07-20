@@ -28,7 +28,7 @@ homeassistant:
 ############################# 
 logger:
   default: info
-  # logs:
+  logs:
     homeassistant.components.travisci.sensor: debug
     travispy: debug
     # homeassistant.components.homekit: debug
