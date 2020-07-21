@@ -28,8 +28,10 @@ homeassistant:
 ############################# 
 logger:
   default: info
-  # logs:
-    # homeassistant.components.homekit: debug
+  logs:
+    homeassistant.components.travisci: debug
+    homeassistant.components.sensor: debug
+    TravisPy: debug
     # homeassistant.components.ping: debug
     # pynetgear: debug
     # homeassistant.components.netgear.device_tracker: debug
