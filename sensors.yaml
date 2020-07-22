@@ -1,7 +1,8 @@
 - platform: rest
   name: Travis Status
   resource: !secret travis_ha_rest_path
-  value_template: '{{ Projects.Project.@name }}'
+  value_template: >-
+    {{ "Projects.Project.@name" }}
   json_attributes_path: $.Projects.Project
   json_attributes:
     - '@activity'
