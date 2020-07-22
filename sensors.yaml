@@ -1,7 +1,16 @@
 - platform: rest
-  name: Travis
+  name: Travis Status
   resource: !secret travis_ha_rest_path
-  value_template: 'OK'
+  value_template: '{{ Projects.Project._name }}'
+  json_attributes_path: $.Projects.Project
+  json_attributes:
+    - _activity
+    - _lastBuildStatus
+    - _lastBuildLabel
+    - _lastBuildTime
+    - _webUrl
+
+
 
 - platform: mqtt
   name: "Brooks Space Heater Power"
