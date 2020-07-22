@@ -30,13 +30,19 @@
 
     travis_repo_info:
       friendly_name: Travis Repo Info
-      value_tamplate: '{{ state_attr('sensor.travis_rest_xml','@name') }}'
+      value_tamplate: >-
+        {{ state_attr('sensor.travis_rest_xml','@name') }}
       attribute_templates:
-        activity: '{{ state_attr('sensor.travis_rest_xml','@activity') }}'
-        lastBuildStatus: '{{ state_attr('sensor.travis_rest_xml','@lastBuildStatus') }}'
-        lastBuildLabel: '{{ state_attr('sensor.travis_rest_xml','@lastBuildLabel') }}'
-        lastBuildTime: '{{ state_attr('sensor.travis_rest_xml','@lastBuildTime') }}'
-        webURL: '{{ state_attr('sensor.travis_rest_xml','@webUrl') }}'
+        activity: >-
+          {{ state_attr('sensor.travis_rest_xml','@activity') }}
+        lastBuildStatus: >-
+          {{ state_attr('sensor.travis_rest_xml','@lastBuildStatus') }}
+        lastBuildLabel: >-
+          {{ state_attr('sensor.travis_rest_xml','@lastBuildLabel') }}
+        lastBuildTime: >-
+          {{ state_attr('sensor.travis_rest_xml','@lastBuildTime') }}
+        webURL: >-
+          {{ state_attr('sensor.travis_rest_xml','@webUrl') }}
 
     nuc_outlet_power_sensor:
       value_template: '{{ states.switch.nuc_outlet.attributes.current_power_w }}'       
