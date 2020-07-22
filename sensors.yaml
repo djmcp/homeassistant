@@ -30,7 +30,7 @@
 
     travis_repo_info:
       friendly_name: Travis Repo Info
-      value_tamplate: "{{ state_attr('sensor.travis_rest_xml','@name') }}"
+      value_template: "{{ state_attr('sensor.travis_rest_xml','@name') }}"
       attribute_templates:
         activity: "{{ state_attr('sensor.travis_rest_xml','@activity') }}"
         lastBuildStatus: "{{ state_attr('sensor.travis_rest_xml','@lastBuildStatus') }}"
