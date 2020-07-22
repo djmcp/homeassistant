@@ -190,6 +190,7 @@
         {% endif %}
       friendly_name: 'Media Room Harmony Hub'
 
+
     # living_room_samsung_online:
     #   value_template: >-
     #     {% if states.device_tracker.samsung_tv_lr_ping %}
