@@ -1,5 +1,7 @@
-- platform: travisci
-  api_key: !secret travisci_api_key
+- platform: rest
+  name: Travis
+  resource: !secret travis_ha_rest_path
+  value_template: 'OK'
 
 - platform: mqtt
   name: "Brooks Space Heater Power"
