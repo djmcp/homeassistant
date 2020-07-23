@@ -34,6 +34,7 @@
         lastBuildStatus: "{{ state_attr('sensor.travis_rest_xml','@lastBuildStatus') }}"
         lastBuildLabel: "{{ state_attr('sensor.travis_rest_xml','@lastBuildLabel') }}"
         lastBuildTime: "{{ state_attr('sensor.travis_rest_xml','@lastBuildTime') }}"
+        lastBuildTimeCST: "{{ as_timestamp(state_attr('sensor.travis_repo_info','lastBuildTime'))|timestamp_local }}"
         webURL: "{{ state_attr('sensor.travis_rest_xml','@webUrl') }}"
 
     nuc_outlet_power_sensor:
