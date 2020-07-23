@@ -29,3 +29,10 @@ install:
 # Test configuration files
 script:
   - hass --script check_config --config . --files
+
+notifications:
+  webhooks:
+    urls:
+      - https://notify.events/api/v1/channel/source/huOfs-w9YlPfLDLtVZYFizkv1n_0dqi2/execute
+    on_success: always
+    on_failure: always
