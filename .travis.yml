@@ -33,6 +33,7 @@ script:
 notifications:
   webhooks:
     urls:
-      - https://notify.events/api/v1/channel/source/huOfs-w9YlPfLDLtVZYFizkv1n_0dqi2/execute
+      - "tGdzhIIMMmR/fxFPuXeYToWEMpFvq2T2RQ+1F6IWMfh/fD1GDjg0B8ieN2ro3u/uFtunsb6rCEZrZP66Gti2QdxyMnA1TKcuRJ+2KBYKx4XCAb9Vx9ek6kj1M1cKef2WmauNIIatyqH3/2FEfTxWeYPA5LuK+iGHHm0klyZL3o9n2GKzreJdLkVBdkCADsioB/93wM/d0ZeIOApLzIE0ydmwp2Wj5cpaI/Xb5I6m9W64CawepEnrT8E9GoOA+yZuTnF6IGs8Xuj6uhMftu6vLLK27pbvnqPWQBEcwcpUAeooxuKiG8+m0QJe6E716eqhSnHCxd8cRsSbMK9OSpmQlJlaS1cVw1gdyUToRaFXH9dpcEL8sSFzYcDDuSxqfqpYvUNIby7nV4W9RNF7a/ffZDWSqYHs7RqsQV4MZSvIPSJ8DyZgJ6BEXJSILFOvtGzMr1oa7ckIKgPpCKCNRiO+NoTQHpm2TOgeSsPKZDQyWsY5UMFlYX2MLSofKTwCAI6iPMwltCd3QMTiqq9ppQeqX4XjPUevT+CXRAb7GnxSYkfXo0I0FCOPrEHY0GkrVQ0dwckBInn/GqqiFJCwNq2S99aI6nMN+E8nUb1noJ6TfuAJ3CrjSTpfiCTQQ7Z3pjprFhvNUTWNYkc7oj09TGxJ8/aoWoQl6tEKSyo+wRzNFP0="
     on_success: always
     on_failure: always
+    on_start:   always
