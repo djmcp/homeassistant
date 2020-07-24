@@ -16,7 +16,7 @@ homeassistant:
   internal_url: "http://10.0.0.135:8123"
 
   # add this part
-  auth_providers:
+  _providers:
     - type: homeassistant
     - type: trusted_networks
       trusted_networks:
