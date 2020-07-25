@@ -23,6 +23,7 @@ variables:
   before_script:
     - python -m homeassistant --version
     - mv secrets_travis.yaml secrets.yaml
+    - HA_VERSION=$(<.HA_VERSION)
   script:
     - |
       python -m homeassistant \
@@ -104,7 +105,7 @@ markdownlint:
 ha-current:
   <<: *ha
   image:
-    name: homeassistant/home-assistant:$HA_VERSION
+    name: homeassistant/home-assistant:${HA_VERSION}
     entrypoint: [""]
 
 ha-latest:
