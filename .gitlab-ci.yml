@@ -19,11 +19,11 @@ variables:
   stage: homeassistant
   variables:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
-    HA_VERSION: "0.112.4"
+    DOCKER_IMAGE: homeassistant/home-assistant:$HA_VERSION
   before_script:
     - python -m homeassistant --version
     - mv secrets_travis.yaml secrets.yaml
-    - HA_VERSION=$(<.HA_VERSION)
+    - export HA_VERSION=$(<.HA_VERSION)
   script:
     - |
       python -m homeassistant \
@@ -105,7 +105,7 @@ markdownlint:
 ha-current:
   <<: *ha
   image:
-    name: homeassistant/home-assistant:$HA_VERSION
+    name: $DOCKER_IMAGE
     entrypoint: [""]
 
 ha-latest:
