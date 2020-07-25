@@ -69,7 +69,7 @@ yamllint:
     # - rm known_devices.yaml appdaemon.yaml apps/apps.yaml
   script:
     - yamllint .
-  allow_failure: false
+  allow_failure: true
 
 jsonlint:
   <<: *preflight
