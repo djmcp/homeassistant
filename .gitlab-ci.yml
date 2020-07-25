@@ -59,6 +59,7 @@ before_script:
 #       if [ "${FAILED}" = "1" ]; then
 #         exit 1
 #       fi
+
 yamllint:
   <<: *preflight
   image: sdesbure/yamllint
