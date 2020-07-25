@@ -28,3 +28,4 @@ harmony_*
 !.HA_VERSION
 !/.storage/lovelace
 !.travis.yml
+!.gitlab-ci.yml
