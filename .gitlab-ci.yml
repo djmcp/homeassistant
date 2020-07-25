@@ -19,7 +19,7 @@ variables:
   stage: homeassistant
   variables:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
-    HA_VERSION: echo .HA_VERSION
+    HA_VERSION: $(<.HA_VERSION)
   before_script:
     - python -m homeassistant --version
     - mv secrets_travis.yaml secrets.yaml
