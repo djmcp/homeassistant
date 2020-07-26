@@ -4,17 +4,14 @@ stages:
   # - deploy
   # - docker-deploy
   # - postflight
-
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-  HA_VERSION: "0.112.4"
-
+  HA_VERSION: 0.113.0
 # Generic preflight template
 .preflight: &preflight
   stage: preflight
   tags:
     - hass
-
 # Generic Home Assistant template
 .ha: &ha
   stage: homeassistant
@@ -31,11 +28,9 @@ variables:
         --info all
   tags:
     - hass
-
 before_script:
- - apt-get update
- - apt-get install -y mosquitto-clients
-
+  - apt-get update
+  - apt-get install -y mosquitto-clients
 # Preflight jobs
 # shellcheck:
 #   <<: *preflight
@@ -59,9 +54,8 @@ before_script:
 #       if [ "${FAILED}" = "1" ]; then
 #         exit 1
 #       fi
-
 yamllint:
-  <<: *preflight
+  !!merge <<: *preflight
   image: sdesbure/yamllint
   before_script:
     - yamllint --version
@@ -70,9 +64,8 @@ yamllint:
   script:
     - yamllint .
   allow_failure: true
-
 jsonlint:
-  <<: *preflight
+  !!merge <<: *preflight
   image: sahsu/docker-jsonlint
   before_script:
     - jsonlint --version || true
@@ -89,7 +82,7 @@ jsonlint:
         exit 1
       fi
 markdownlint:
-  <<: *preflight
+  !!merge <<: *preflight
   image:
     name: ruby:alpine
     entrypoint: [""]
@@ -99,29 +92,25 @@ markdownlint:
     - mdl --version
   script:
     - mdl --style all --warnings --git-recurse .
-
 # Home Assistant test jobs
 ha-current:
-  <<: *ha
+  !!merge <<: *ha
   image:
     name: homeassistant/home-assistant:$HA_VERSION
     entrypoint: [""]
-
 ha-latest:
-  <<: *ha
+  !!merge <<: *ha
   image:
     name: homeassistant/home-assistant:latest
     entrypoint: [""]
-
 ha-rc:
-  <<: *ha
+  !!merge <<: *ha
   image:
     name: homeassistant/home-assistant:rc
     entrypoint: [""]
   allow_failure: true
-
 ha-dev:
-  <<: *ha
+  !!merge <<: *ha
   image:
     name: homeassistant/home-assistant:dev
     entrypoint: [""]
