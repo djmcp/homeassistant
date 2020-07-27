@@ -17,7 +17,7 @@ cache: pip
 
 # Prepare the CI environment to support Home Assistant
 before_install:
-  - mv secrets_travis.yaml secrets.yaml
+  - mv secrets_ci.yaml secrets.yaml
   - touch home-assistant_v2.db
   - touch home-assistant.log
   - HA_VERSION=$(<.HA_VERSION)

@@ -19,7 +19,7 @@ variables:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
     - python -m homeassistant --version
-    - mv secrets_travis.yaml secrets.yaml
+    - mv secrets_ci.yaml secrets.yaml
   script:
     - |
       python -m homeassistant \
