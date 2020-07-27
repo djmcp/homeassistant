@@ -6,7 +6,7 @@ stages:
   # - postflight
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-  HA_VERSION: 0.112.4
+  HA_VERSION: 0.113.1
 # Generic preflight template
 .preflight: &preflight
   stage: preflight
