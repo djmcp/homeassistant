@@ -11,6 +11,10 @@
     - '@lastBuildTime'
     - '@webUrl'
 
+- platform: gitlab_ci
+  gitlab_id: !secret gitlab_ci_id
+  token: !secret gitlab_ci_token
+
 - platform: mqtt
   name: "Brooks Space Heater Power"
   state_topic: "shellies/shelly1pm-76B422/relay/0/power"
