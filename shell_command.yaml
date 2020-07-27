@@ -1,1 +1,2 @@
 git_pull: ssh pete@10.0.0.135 "cd /srv/docker/hass && git pull"
+update_ci_cur_ver: ssh pete@10.0.0.135 "cd /srv/docker/hass && ./update_ci_version.sh"
