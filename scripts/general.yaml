@@ -17,7 +17,6 @@
 #     data: {}
 #     service: script.presence_lr_arlo_away_mode
 
-
 # general_good_morning:
 #   alias: Good_Morning
 #   sequence:
