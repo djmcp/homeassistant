@@ -4,6 +4,7 @@ stages:
   # - deploy
   # - docker-deploy
   # - postflight
+  # - temp
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
