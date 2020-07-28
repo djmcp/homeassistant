@@ -4,7 +4,7 @@
 *.log
 
 # Ignore folders.
-
+/*/._*
 /.storage
 !/.storage/lovelace
 
