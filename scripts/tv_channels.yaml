@@ -1,0 +1,40 @@
+channel_fox:
+  alias: Channel FOX
+  sequence:
+    - delay:
+        milliseconds: 400
+    - alias: Channel 1
+      service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBQAAgdBzgGGgVeByoIKgYnBlkGAAHHCB0FWgcYBhoFGgYfBhoGGQYAClYHHgc4BhkGXgcqBysGJwZZBwABxgUfBjUIOgoYBRoGHwYZBhoGAA0FAAAAAAAAAAA=="          
+    - delay:
+        milliseconds: 400
+    - alias: Channel 0
+      service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBQAAceBjoFGgZdCCoGKwYoB1gHAAHFCB0HXAYaBhoFGgYaBhkGGgYAClUIHQY5CBgGXQcrCCkGKAVZCAABxQkcBjkGPgYZCBgGGgUaBhoGAA0FAAAAAAAAAAA=="         
+    - delay:
+        milliseconds: 400
+    - alias: Channel 0
+      service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBQAAceBjoFGgZdCCoGKwYoB1gHAAHFCB0HXAYaBhoFGgYaBhkGGgYAClUIHQY5CBgGXQcrCCkGKAVZCAABxQkcBjkGPgYZCBgGGgUaBhoGAA0FAAAAAAAAAAA=="         
+    - delay:
+        milliseconds: 400
+    - alias: Channel 0
+      service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgBQAAkcBjkJFwZdBiwHKgYnBlkGAAHHCRwGSwcZBRoGGgYsBRoGGgYAClUGHwc4BxkHXAcqBiwGJwZZBgABxwYfBSgGPgcYBhoHKggYBhoFAA0FAAAAAAAAAAA=="          
+    - delay:
+        milliseconds: 400
+    - alias: OK Button
+      service: switch.broadlink_send_packet_10_0_0_182
+      data:
+        packet: 
+          - "JgB4AAgdBzgGGgVeCCkIKQokBlkHAAHGBx4FPgcZBRoGJAUxBhoGGQYAClYGHgg4BRoGXQgqBysFKAZZBgABxggdBhoGPQYaBiMGMQcZBRoGAAFuCB0HOAYaBl0HKwcqCCYFWQYAAccGHwYjBxkFGgZZB1wIGAYaBQANBQ=="
+    - delay:
+        milliseconds: 400
