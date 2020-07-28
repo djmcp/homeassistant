@@ -4,14 +4,17 @@ stages:
   # - deploy
   # - docker-deploy
   # - postflight
+
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
   HA_VERSION: 0.113.1
+
 # Generic preflight template
 .preflight: &preflight
   stage: preflight
   tags:
     - hass
+
 # Generic Home Assistant template
 .ha: &ha
   stage: homeassistant
@@ -31,6 +34,7 @@ variables:
 before_script:
   - apt-get update
   - apt-get install -y mosquitto-clients
+
 # Preflight jobs
 # shellcheck:
 #   <<: *preflight
@@ -54,6 +58,7 @@ before_script:
 #       if [ "${FAILED}" = "1" ]; then
 #         exit 1
 #       fi
+
 yamllint:
   !!merge <<: *preflight
   image: sdesbure/yamllint
@@ -64,6 +69,7 @@ yamllint:
   script:
     - yamllint -c ./ci_files/yamllint_config.yaml .
   allow_failure: true
+
 jsonlint:
   !!merge <<: *preflight
   image: sahsu/docker-jsonlint
@@ -81,6 +87,7 @@ jsonlint:
       if [ "${FAILED}" = "1" ]; then
         exit 1
       fi
+
 markdownlint:
   !!merge <<: *preflight
   image:
@@ -92,6 +99,7 @@ markdownlint:
     - mdl --version
   script:
     - mdl --style all --warnings --git-recurse .
+
 # Home Assistant test jobs
 ha-current:
   !!merge <<: *ha
