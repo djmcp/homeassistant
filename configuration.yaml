@@ -15,7 +15,6 @@ homeassistant:
   external_url: !secret external_url
   internal_url: "http://10.0.0.135:8123"
 
-
   # add this part
   auth_providers:
     - type: homeassistant
@@ -26,34 +25,30 @@ homeassistant:
 
 #############################
 # TURN ON CORE STUFF        #
-############################# 
+#############################
 logger:
   default: info
-  #logs:
-    #homeassistant.components.travisci: debug
-    #homeassistant.components.sensor: debug
-    #TravisPy: debug
-    # homeassistant.components.ping: debug
-    # pynetgear: debug
-    # homeassistant.components.netgear.device_tracker: debug
-    # pyhap: debug
-    # pyhap.accessory_driver: debug
-    # wink: debug
-    # pywink.api: debug
-    # pubnub: debug
-    # pyecobee: debug
-    # homeassistant.components.ecobee: debug
-    # homeassistant.components.mobile_app: debug
-
+  # logs:
+  #   homeassistant.components.travisci: debug
+  #   homeassistant.components.sensor: debug
+  #   TravisPy: debug
+  #   homeassistant.components.ping: debug
+  #   pynetgear: debug
+  #   homeassistant.components.netgear.device_tracker: debug
+  #   pyhap: debug
+  #   pyhap.accessory_driver: debug
+  #   wink: debug
+  #   pywink.api: debug
+  #   pubnub: debug
+  #   pyecobee: debug
+  #   homeassistant.components.ecobee: debug
+  #   homeassistant.components.mobile_app: debug
 
 # Setup DEFAULT_CONFIG
 default_config:
 
-
-
 # Show links to resources in log and frontend
 #introduction:
-
 
 # Enables the frontend
 frontend:
@@ -63,19 +58,9 @@ frontend:
 # Enables configuration UI
 config:
 
-#python_script:
-
 http:
-  # Uncomment this to add a password (recommended!)
-  #api_password: !secret http_password
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  # base_url: example.duckdns.org:8123
-  #ssl_certificate: /ssl/fullchain.pem
-  #ssl_key: /ssl/privkey.pem
 
 updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
 
 # Discover some devices automatically
 discovery:
@@ -91,7 +76,6 @@ recorder:
   purge_keep_days: 3
 
 sun:
-
 
 #############################
 # INCLUDES                  #
@@ -123,8 +107,6 @@ influxdb: !include influxdb.yaml
 #tplink: !include tplink.yaml
 homekit: !include homekit.yaml
 shell_command: !include shell_command.yaml
-
-
 
 #############################
 # Enable some randoms       #
@@ -186,8 +168,7 @@ lutron_caseta:
   certfile: caseta.crt
   ca_certs: caseta-bridge.crt
 
-
-#media_player:
+# media_player:
 #  - platform: plex
 #  - platform: alexa
 #    email: !secret amazon_user
@@ -206,4 +187,3 @@ lutron_caseta:
 #usps:
 #    username: !secret usps_user
 #    password: !secret usps_pass
-

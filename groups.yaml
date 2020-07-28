@@ -1,12 +1,12 @@
 ###############################
 #                             #
 #            TABS             #
-#                             # 
+#                             #
 ###############################
 
 default_view:
   icon: mdi:home
-  entities: 
+  entities:
     #- group.home_status
     - group.climate
     - group.locks
@@ -17,7 +17,7 @@ default_view:
 downstairs:
   name: Downstairs
   #icon: mdi:sofa
-  entities: 
+  entities:
     - group.kitchen
     - group.living_room
     - group.entry
@@ -29,10 +29,8 @@ basement:
   entities:
     - group.basement_lights
 
-
-
 upstairs:
-  name: Upstairs 
+  name: Upstairs
   #icon: mdi:hotel
   entities:
     - group.climate
@@ -64,7 +62,7 @@ people:
     - input_select.guest_mode
 
 media_players:
-  name: media media players 
+  name: media media players
   icon: mdi:television
   entities:
     - media_player.media_room
@@ -97,12 +95,10 @@ automations:
     - group.outlets
     - group.timers
 
-
-
 ###############################
 #                             #
 #           CARDS             #
-#                             # 
+#                             #
 ###############################
 
 climate:
@@ -142,7 +138,6 @@ alerts:
     - alert.garage_entry_door_battery
     - alert.garage_main_door_open
 
-    
 mcdowells:
   name: The McDowells
   entities:
@@ -182,12 +177,9 @@ living_room:
     - sensor.living_room_samsung_online
     - sensor.media_room_samsung_online
 
-
 downstairs_media:
   name: Downstairs Media
   entities:
-    #- media_player.living_room_tv
-    #- media_player.living_room_cc
 
 kitchen:
   name: Kitchen
@@ -198,7 +190,7 @@ kitchen:
     - lock.back_door
 
 garage_entry:
-  name: Garage Entry 
+  name: Garage Entry
   entities:
     - switch.garage_entry
     - lock.garage_entry_door
@@ -212,7 +204,6 @@ basement_lights:
     - light.basement_stairs
     - light.basement_stairs_top
     - light.basement_stairs_bottom
-
 
 master_bedroom:
   name: Master Bedroom
@@ -271,7 +262,7 @@ sleep_switches:
 sleep_lights:
   name: Sleep Lights
   entities:
-    - light.entry_lamp  
+    - light.entry_lamp
     - light.mantle
     - light.deck_light
 
@@ -316,7 +307,6 @@ boolean_switches:
     - input_boolean.basement_bedroom
     - binary_sensor.pete_phone_charger_charging
     - binary_sensor.jessi_phone_charger_charging
-
 
 outlets:
   name: Outlets
@@ -364,7 +354,6 @@ arlo_camera_last_images:
     - camera.back_deck_last_motion
     - camera.basement_last_motion
 
-
 door_sensors:
   name: Door Sensors
   entities:
@@ -372,18 +361,16 @@ door_sensors:
     - binary_sensor.back_door_opened
     - binary_sensor.garage_entry_door_opened
 
-
 window_sensors:
   name: Window Sensors
   entities:
     - binary_sensor.left_dining_window_opened
     - binary_sensor.middle_dining_window_opened
     - binary_sensor.right_dining_window_opened
-    
 
 #basement_all_lights:
 #  name: Basement All Lights
-#  
+#
 #  control: hidden
 #  entities:
 #    - group.basement_media_room_lights
@@ -391,7 +378,7 @@ window_sensors:
 
 #basement_bar_lights:
 #  name: Basement Bar Lights
-#  
+#
 #  control: hidden
 #  entities:
 #    - light.bar_left
@@ -400,7 +387,7 @@ window_sensors:
 
 #basement_media_room_lights:
 #  name: Basement Media Room Lights
-#  
+#
 #  control: hidden
 #  entities:
 #    - group.basement_media_room_tv_lights
@@ -408,21 +395,15 @@ window_sensors:
 
 #basement_media_room_tv_lights:
 #  name: Basement TV Lights
-#  
+#
 #  control: hidden
 #  entities:
 #    - light.media_room_center
 
 #basement_media_room_back_lights:
 #  name: Basement Back Media Room Lights
-#  
+#
 #  control: hidden
 #  entities:
 #    - light.media_room_back_left
 #    - light.media_room_back_right
-
-    
-
-
-
-

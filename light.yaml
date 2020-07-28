@@ -2,7 +2,7 @@
 #  MQTT Lights                        #
 #######################################
 
-#Kitchen
+# Kitchen
 - platform: mqtt
   name: "Kitchen Cabinet"
   state_topic: "hasshub/light/kitchen_cabinet/state"
@@ -25,7 +25,7 @@
   payload_off: "off"
   optimistic: false
 
-#Upstairs Hallway
+# Upstairs Hallway
 - platform: mqtt
   name: "Upstairs Hallway"
   state_topic: "hasshub/light/upstairs_hallway/state"
@@ -37,7 +37,7 @@
   payload_off: "off"
   optimistic: false
 
-#Basement Stairs
+# Basement Stairs
 - platform: mqtt
   name: "Basement Stairs Bottom"
   state_topic: "hasshub/light/basement_stairs_bottom/state"
@@ -61,7 +61,7 @@
   optimistic: false
 
 
-#Basement Media Room
+# Basement Media Room
 - platform: mqtt
   name: "Media Room Back Left"
   state_topic: "hasshub/light/media_room_back_left/state"
@@ -95,7 +95,7 @@
   payload_off: "off"
   optimistic: false
 
-#Basement Bar
+# Basement Bar
 - platform: mqtt
   name: "Basement Bar Left"
   state_topic: "hasshub/light/basement_bar_left/state"
@@ -129,7 +129,7 @@
   payload_off: "off"
   optimistic: false
 
-#Entryway
+# Entryway
 - platform: mqtt
   name: "Front Porch"
   state_topic: "hasshub/light/front_porch/state"
@@ -141,7 +141,7 @@
   payload_off: "off"
   optimistic: false
 
-#Living Room
+# Living Room
 - platform: mqtt
   name: "Mantle"
   state_topic: "hasshub/light/mantle/state"
@@ -257,13 +257,10 @@
 - platform: template
   lights:
     do_not_use_breakfast_table_lights:
-      value_template: "{{ states.switch.breakfast_table.state }}" 
+      value_template: "{{ states.switch.breakfast_table.state }}"
       turn_on:
         service: switch.turn_on
         entity_id: switch.breakfast_table
       turn_off:
         service: switch.turn_off
         entity_id: switch.breakfast_table
-
-
-

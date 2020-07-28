@@ -3,7 +3,7 @@ notify_petes_iphone_template:
   sequence:
   - alias: Send iOS Notification
     service: notify.ios_petes_iphone
-    data_template: 
+    data_template:
       title: "{{ notify_title }}"
       message: "{{ notify_message }}"
 
@@ -12,7 +12,7 @@ notify_petes_iphone_jpeg_template:
   sequence:
   - alias: Send iOS Notification
     service: notify.ios_petes_iphone
-    data_template: 
+    data_template:
       title: "{{ notify_title }}"
       message: "{{ notify_message }}"
       data:
@@ -24,11 +24,11 @@ notify_petes_iphone_jpeg_template:
 ############################
 #         TEMPLATE         #
 ############################
-#test_send_notification_to_iphone:
-#  alias: test_send_notification_to_iphone
-#  sequence:
-#  - alias: send ios notification
-#    service: script.test_notify_template
-#    data:
-#      notify_title: "Pass the Title!"
-#      notify_message: "Pass the message for the test$"
+# test_send_notification_to_iphone:
+#   alias: test_send_notification_to_iphone
+#   sequence:
+#   - alias: send ios notification
+#     service: script.test_notify_template
+#     data:
+#       notify_title: "Pass the Title!"
+#       notify_message: "Pass the message for the test$"

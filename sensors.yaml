@@ -38,25 +38,27 @@
         lastBuildStatus: "{{ state_attr('sensor.travis_rest_xml','@lastBuildStatus') }}"
         lastBuildLabel: "{{ state_attr('sensor.travis_rest_xml','@lastBuildLabel') }}"
         lastBuildTime: "{{ state_attr('sensor.travis_rest_xml','@lastBuildTime') }}"
-        lastBuildTimeCST: "{{ as_timestamp(state_attr('sensor.travis_repo_info','lastBuildTime'))|timestamp_local }}"
+        lastBuildTimeCST: <
+          "{{ as_timestamp(state_attr('sensor.travis_repo_info',
+          'lastBuildTime'))|timestamp_local }}"
         webURL: "{{ state_attr('sensor.travis_rest_xml','@webUrl') }}"
 
     nuc_outlet_power_sensor:
-      value_template: '{{ states.switch.nuc_outlet.attributes.current_power_w }}'       
-      unit_of_measurement:  'W'
+      value_template: '{{ states.switch.nuc_outlet.attributes.current_power_w }}'
+      unit_of_measurement: 'W'
 
     living_room_ec_power_sensor:
-      value_template: '{{ states.switch.living_room_ec.attributes.current_power_w }}'       
-      unit_of_measurement:  'W'
-   
+      value_template: '{{ states.switch.living_room_ec.attributes.current_power_w }}'
+      unit_of_measurement: 'W'
+
     nordictrack_treadmill_power_sensor:
       friendly_name: Nordictrack Treadmill Power Sensor
-      value_template: '{{ states.switch.nordictrack_treadmill.attributes.current_power_w }}'       
-      unit_of_measurement:  'W'
+      value_template: '{{ states.switch.nordictrack_treadmill.attributes.current_power_w }}'
+      unit_of_measurement: 'W'
 
     laundry_washer_power_sensor:
-      value_template: '{{ states.switch.laundry_washer.attributes.current_power_w }}'       
-      unit_of_measurement:  'W'
+      value_template: '{{ states.switch.laundry_washer.attributes.current_power_w }}'
+      unit_of_measurement: 'W'
 
     nordictrack_treadmill_status:
       friendly_name: "Nordictrack Treadmill Status"
@@ -126,7 +128,7 @@
           0
         {% else %}
           -1
-        {% endif %}  
+        {% endif %}
 
     sprinkler_status_back_fence:
       friendly_name: "Sprinkler Status Back Fence"
@@ -137,7 +139,7 @@
           0
         {% else %}
           -1
-        {% endif %} 
+        {% endif %}
 
     sprinkler_status_center_backyard:
       friendly_name: "Sprinkler Status Center Backyard"
@@ -148,7 +150,7 @@
           0
         {% else %}
           -1
-        {% endif %} 
+        {% endif %}
 
     sprinkler_status_south_side:
       friendly_name: "Sprinkler Status South Side"
@@ -159,7 +161,7 @@
           0
         {% else %}
           -1
-        {% endif %} 
+        {% endif %}
 
     sprinkler_status_north_side_driveway:
       friendly_name: "Sprinkler Status North Side Driveway"
@@ -170,8 +172,7 @@
           0
         {% else %}
           -1
-        {% endif %} 
-
+        {% endif %}
 
     thermostat_target_temp:
       value_template: '{{ states.climate.thermostat.attributes.temperature }}'
@@ -181,7 +182,7 @@
     trash_day:
       value_template: "{{ states('input_text.trash_day') }}"
       friendly_name: 'Trash Day'
-    
+
     media_room_harmony_hub_online:
       value_template: >-
         {% if states.device_tracker.media_room_harmony_hub %}
@@ -194,7 +195,6 @@
           Unknown
         {% endif %}
       friendly_name: 'Media Room Harmony Hub'
-
 
     # living_room_samsung_online:
     #   value_template: >-
@@ -222,44 +222,6 @@
         {% endif %}
       friendly_name: 'Media Room Samsung'
 
-
-
-
-    # arlo_lr_base_station_armament:
-    #   value_template: >-
-    #     {% if states.alarm_control_panel.living_room_hub %}
-    #     {% if is_state('alarm_control_panel.living_room_hub', 'disarmed') %}
-    #       Disarmed
-    #     {% elif is_state('alarm_control_panel.living_room_hub', 'armed_home') %}
-    #       Armed Home
-    #     {% elif is_state('alarm_control_panel.living_room_hub', 'armed_away') %}
-    #       Armed Away
-    #     {% else %}
-    #       Other
-    #     {% endif %}
-    #     {% else %}
-    #       Unknown
-    #     {% endif %}
-    #   friendly_name: 'Arlo Living Room Mode'  
-
-    # arlo_g_base_station_armament:
-    #   value_template: >-
-    #     {% if states.alarm_control_panel.garage_hub %}
-    #     {% if is_state('alarm_control_panel.garage_hub', 'disarmed') %}
-    #       Disarmed
-    #     {% elif is_state('alarm_control_panel.garage_hub', 'armed_home') %}
-    #       Armed Home
-    #     {% elif is_state('alarm_control_panel.garage_hub', 'armed_away') %}
-    #       Armed Away
-    #     {% else %}
-    #       Other
-    #     {% endif %}
-    #     {% else %}
-    #       Unknown
-    #     {% endif %}
-    #   friendly_name: 'Arlo Garage Mode'     
-
-      
 - platform: systemmonitor
   resources:
     - type: disk_use_percent
@@ -268,7 +230,6 @@
     - type: swap_use_percent
     - type: processor_use
     - type: last_boot
-
 
 - platform: time_date
   display_options:
@@ -286,7 +247,6 @@
     - temperature
     - nearest_storm_distance
 
-
 - platform: statistics
   name: Bottle Warmer Stats 5min
   entity_id: sensor.bottle_warmer_power
@@ -299,22 +259,17 @@
   max_age:
     minutes: 15
 
-
 - platform: mqtt
   name: "Dryer Power Current"
   state_topic: "esp_dryermon-7D77DC/SCT"
-  unit_of_measurement : "A"
+  unit_of_measurement: "A"
   icon: mdi:flash-circle
 
 - platform: mqtt
   name: "DryerMon Signal"
   state_topic: "esp_dryermon-7D77DC/RSSI"
   unit_of_measurement: "dBm"
- 
 
 - platform: mqtt
   name: "DryerMon Status"
   state_topic: "esp_dryermon-7D77DC/BUILD"
-
-
-

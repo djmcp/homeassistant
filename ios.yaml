@@ -21,18 +21,3 @@ push:
           authenticationRequired: yes
           destructive: no
           behavior: 'default'
-#     - name: Reboot Wink
-#       identifier: 'reboot_wink'
-#       actions:
-#         - identifier: 'REBOOT_WINK_NOW'
-#           title: 'Reboot Wink Now'
-#           activationMode: 'background'
-#           authenticationRequired: yes
-#           destructive: yes
-#           behavior: 'default'
-#         - identifier: 'CANCEL_WINK_REBOOT'
-#           title: 'Cancel Reboot'
-#           activationMode: 'background'
-#           authenticationRequired: yes
-#           destructive: no
-#           behavior: 'default'

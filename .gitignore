@@ -4,6 +4,12 @@
 *.log
 
 # Ignore folders.
+/misc/._*
+/scenes/._*
+/scripts/._*
+/tts/._*
+/www/._*
+/automations/._*
 /.storage
 !/.storage/lovelace
 
