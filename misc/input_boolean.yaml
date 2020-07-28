@@ -11,7 +11,7 @@ volume_up:
   name: Volume Up
   initial: off
 volume_down:
-  name: Volume Down 
+  name: Volume Down
   initial: off
 living_room_tv:
   name: Living Room TV
@@ -34,12 +34,10 @@ arlo_g_arm_active:
 arlo_g_disarm_active:
   name: Garage Disarmed
 
-
 good_night:
   name: Good Night
 good_morning:
   name: Good Morning
-
 
 switch_ac_kitchen:
   name: AC kitchen

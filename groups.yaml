@@ -1,7 +1,7 @@
 ###############################
 #                             #
 #            TABS             #
-#                             # 
+#                             #
 ###############################
 
 default_view:
@@ -29,10 +29,8 @@ basement:
   entities:
     - group.basement_lights
 
-
-
 upstairs:
-  name: Upstairs 
+  name: Upstairs
   #icon: mdi:hotel
   entities:
     - group.climate
@@ -96,8 +94,6 @@ automations:
     - group.all_scenes
     - group.outlets
     - group.timers
-
-
 
 ###############################
 #                             #
@@ -182,7 +178,6 @@ living_room:
     - sensor.living_room_samsung_online
     - sensor.media_room_samsung_online
 
-
 downstairs_media:
   name: Downstairs Media
   entities:
@@ -212,7 +207,6 @@ basement_lights:
     - light.basement_stairs
     - light.basement_stairs_top
     - light.basement_stairs_bottom
-
 
 master_bedroom:
   name: Master Bedroom
@@ -271,7 +265,7 @@ sleep_switches:
 sleep_lights:
   name: Sleep Lights
   entities:
-    - light.entry_lamp  
+    - light.entry_lamp
     - light.mantle
     - light.deck_light
 
@@ -316,7 +310,6 @@ boolean_switches:
     - input_boolean.basement_bedroom
     - binary_sensor.pete_phone_charger_charging
     - binary_sensor.jessi_phone_charger_charging
-
 
 outlets:
   name: Outlets
@@ -383,7 +376,7 @@ window_sensors:
 
 #basement_all_lights:
 #  name: Basement All Lights
-#  
+#
 #  control: hidden
 #  entities:
 #    - group.basement_media_room_lights
@@ -391,7 +384,7 @@ window_sensors:
 
 #basement_bar_lights:
 #  name: Basement Bar Lights
-#  
+#
 #  control: hidden
 #  entities:
 #    - light.bar_left
@@ -400,7 +393,7 @@ window_sensors:
 
 #basement_media_room_lights:
 #  name: Basement Media Room Lights
-#  
+#
 #  control: hidden
 #  entities:
 #    - group.basement_media_room_tv_lights
@@ -408,21 +401,15 @@ window_sensors:
 
 #basement_media_room_tv_lights:
 #  name: Basement TV Lights
-#  
+#
 #  control: hidden
 #  entities:
 #    - light.media_room_center
 
 #basement_media_room_back_lights:
 #  name: Basement Back Media Room Lights
-#  
+#
 #  control: hidden
 #  entities:
 #    - light.media_room_back_left
 #    - light.media_room_back_right
-
-    
-
-
-
-

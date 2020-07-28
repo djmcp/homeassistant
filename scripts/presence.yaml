@@ -14,116 +14,16 @@ presence_g_arlo_home_mode:
   alias: Presence_G_Arlo_Home_Mode
   sequence:
   - delay: '00:00:01'
-  #- alias: Set Arlo to Home Mode
-  #  data:
-  #    entity_id: alarm_control_panel.garage_hub
-  #  service: alarm_control_panel.alarm_arm_home
+  # - alias: Set Arlo to Home Mode
+  #   data:
+  #     entity_id: alarm_control_panel.garage_hub
+  #   service: alarm_control_panel.alarm_arm_home
 
 presence_g_arlo_away_mode:
   alias: Presence_G_Arlo_Away_Mode
   sequence:
   - delay: '00:00:01'
-  #- alias: Set Arlo to Away Mode
-  #  data:
-  #    entity_id: alarm_control_panel.garage_hub
-  #  service: alarm_control_panel.alarm_arm_away
-
-
-# presence_late_night_arrival:
-#   alias: Presence_Late_Night_Arrival 
-#   sequence:
-#   - condition: and
-#     conditions:
-#     - condition: state
-#       entity_id: sun.sun
-#       state: below_horizon
-#     - condition: time
-#       after: '23:00'
-#       before: '08:00'
-#   - alias: Call Somebody Arriving Lights
-#     data: {}
-#     service: script.presence_somebody_arriving_lights
-
-
-# presence_somebody_arriving:
-#   alias: Presence_Somebody_Home
-#   sequence:
-#   - condition: template
-#     value_template: >
-#       {% if states.script.presence_somebody_arriving.attributes.last_triggered is not defined %}
-#       true
-#       {% elif as_timestamp(now()) | int   -  as_timestamp(states.script.presence_somebody_arriving.attributes.last_triggered) | int > 120 %} 
-#       true 
-#       {% else %} 
-#       false
-#       {% endif %}  
-#   - alias: Unlock Garage Door
-#     data:
-#       entity_id: lock.garage_entry_door
-#     service: lock.unlock
-#   - alias: Turn off Empty House switch
-#     data:
-#       entity_id: input_boolean.empty_house
-#     service: input_boolean.turn_off
-#   - alias: Call Arlo Home Mode
-#     data: {}
-#     service: script.presence_lr_arlo_home_mode
-#   - alias: Call Arlo Home Mode
-#     data: {}
-#     service: script.presence_g_arlo_home_mode
-
-
-# presence_somebody_arriving_lights:
-#   alias: Presence_Somebody_Arriving_Lights
-#   sequence:
-#   - condition: and
-#     conditions: 
-#     - condition: state
-#       entity_id: sun.sun
-#       state: below_horizon
-#     - condition: state
-#       entity_id: group.mcdowells
-#       state: home
-#   - alias: Turn on Garage Entry light
-#     data:
-#       entity_id: switch.garage_entry
-#     service: switch.turn_on
-#   - alias: Turn on Breakfast Table light
-#     data:
-#       entity_id: switch.breakfast_table_light
-#     service: switch.turn_on
-#   - delay: 00:02:00
-#   - alias: Turn off Garage Entry light
-#     data:
-#       entity_id: switch.garage_entry
-#     service: switch.turn_off
-
-
-
-# presence_somebody_left:
-#   alias: Presence_Somebody_Left
-#   sequence:
-#   - alias: Call Presence_Update_Home_Status script
-#     data: {}
-#     service: script.presence_update_home_status
-#   - alias: Lock doors if house is empty
-#     data:
-#       entity_id: group.all_locks
-#     service_template: > 
-#         {% if is_state('group.mcdowells', 'not_home') %}
-#           lock.lock
-#         {% endif %}
-        
-
-# presence_update_home_status:
-#   alias: Presence_Update_Home_Status
-#   sequence:
-#   - alias: Change House Status
-#     service: input_select.select_option
-#     entity_id: input_select.home_status
-#     data_template:
-#       option: "{% if is_state('group.mcdowells', 'not_home') %}\n  Nobody Home\n{%\
-#         \ elif is_state('device_tracker.petes_iphone_petes_iphone', 'home') and is_state('device_tracker.jessis_iphone_jessis_iphone',\
-#         \ 'home') %}\n  Everybody Home\n{% elif is_state('device_tracker.petes_iphone_petes_iphone',\
-#         \ 'home') %}\n  Pete Home\n{% elif is_state('device_tracker.jessis_iphone_jessis_iphone',\
-#         \ 'home') %}\n  Jessi Home\n{% else %} {% endif %}\n"
+  # - alias: Set Arlo to Away Mode
+  #   data:
+  #     entity_id: alarm_control_panel.garage_hub
+  #   service: alarm_control_panel.alarm_arm_away

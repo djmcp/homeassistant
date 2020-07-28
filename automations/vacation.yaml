@@ -27,9 +27,7 @@
     data:
       entity_id: group.upstairs_light_switches
     service: switch.turn_off
-  
 
-  
 - id: '1505519134442'
   alias: Vacation_Sundown
   trigger:
@@ -45,8 +43,7 @@
     data:
       entity_id: group.downstairs_light_switches
     service: switch.turn_on
-  
-  
+
 - id: '1505520520312'
   alias: Vacation_Sunup
   trigger:
@@ -61,7 +58,7 @@
     data:
       entity_id: light.entry_lamp
     service: light.turn_off
-  
+
 - id: '1505520748112'
   alias: Vacation
   trigger:

@@ -1,7 +1,7 @@
 - platform: ping
   interval_seconds: 30
   count: 4
-  hosts: 
+  hosts:
     samsung_tv_lr_ping: 10.0.0.111
     samsung_tv_mr_ping: 10.0.0.112
     # petes_iphone_ping: 10.0.0.120
