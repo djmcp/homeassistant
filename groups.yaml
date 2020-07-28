@@ -180,8 +180,6 @@ living_room:
 downstairs_media:
   name: Downstairs Media
   entities:
-    # - media_player.living_room_tv
-    # - media_player.living_room_cc
 
 kitchen:
   name: Kitchen
