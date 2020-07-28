@@ -4,7 +4,6 @@
 # Simply tests that Home Assistant configuration is valid.
 #
 # @link https://docs.travis-ci.com/user/tutorial/
-# @link https://www.home-assistant.io/docs/ecosystem/backup/backup_github/#step-7-configuration-file-testing
 #
 
 # Select the base environment
@@ -36,4 +35,4 @@ notifications:
       secure: ZNyD0uKaJT7xv5lRQN7n6x4n89l6/zU6NqW0/zH8LW7b2gWNX1bWqxwNotF30zIzOnqjP7z3yWjVWQbYURQZQskR+qGw3DHr9MISnNJwgYMSMOM3B+yQzWYvZdVYxKmg7RICPLuts88aK6vYfdh0qAgKI5zQejcbcvaSAcdc59V/royraMSt9oKXLkeqthZU5NXdfAs5uCxcVJ/wdU1T8MFZevuUHyS+tVn2A+4P3gIIenY/q60yOuuhdCJs4lzM95cqyZrdCiQdF0z2Ao8nW82PIWChVyS9zraMH2W4yCSfgrtbNUbSODAX0ka3RAp+Cau/Y8LElod0IY/3VNIKuVngpNPOEqlaOEWKFKMl0dUJjMK2RPRKnGCvzFWZBVIyjVjWXPuG+tB/fnewt6LonMnUv5tBSRoYtpUG/pO4TJ/rUaMu1Na3y38dTeDX7Q3IUa2dcPwn+/4XRBVHuwUsxMx5fa503YHV6mzkD9p3G8bW8mJ8prvuw60Wz51Uzrr1fbV0XRg53VtsNdW8EMjg1TjJqZHMAoWE9DEVpFQF+hwd3lNGmjUiX/+ek4v0Vu6kW+1vkckB+JqrbIk5IbXbX8DLmwQUInXRUT8NnM9VUGBEgZj6kjfyPLMQSzQwMHA36xrSdXhNu4xRvTLWUY9sNskcUyKRljY9mLyBSalbIL8=
     on_success: always
     on_failure: always
-    on_start:   always
+    on_start: always

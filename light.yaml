@@ -257,13 +257,10 @@
 - platform: template
   lights:
     do_not_use_breakfast_table_lights:
-      value_template: "{{ states.switch.breakfast_table.state }}" 
+      value_template: "{{ states.switch.breakfast_table.state }}"
       turn_on:
         service: switch.turn_on
         entity_id: switch.breakfast_table
       turn_off:
         service: switch.turn_off
         entity_id: switch.breakfast_table
-
-
-

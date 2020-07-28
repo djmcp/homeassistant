@@ -112,7 +112,7 @@
       value_template: "{{ states('sensor.living_room_ec_power_sensor')|float > 10 }}"
       friendly_name: 'Living Room TV'
       device_class: power
-    
+
     brooks_snoo_status:
       friendly_name: 'Brooks Snoo Status'
       value_template: "{{ states('sensor.brooks_snoo_outlet_power_sensor')|float > 4 }}"
@@ -127,18 +127,6 @@
       friendly_name: 'Bottle Warmer Status'
       value_template: "{{ states('sensor.bottle_warmer_stats_5min')|float > 10 }}"
       device_class: power
-
-
-    # garage_entry_door_battery_low:
-    #   value_template: '{{ states.lock.garage_entry_door.attributes.battery_level < 10 }}'
-    #   friendly_name: 'Garage Door Battery is LOW'
-    # back_door_battery_low:
-    #   value_template: '{{ states.lock.back_door.attributes.battery_level < 10 }}'
-    #   friendly_name: 'Back Door Battery is LOW'
-    # front_door_battery_low:
-    #   value_template: '{{ states.lock.front_door.attributes.battery_level < 10 }}'
-    #   friendly_name: 'Front Door Battery is LOW'
-
 
 - platform: mqtt
   name: Garage Main Door Open

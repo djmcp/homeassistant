@@ -1,4 +1,4 @@
-#- platform: arlo
+# - platform: arlo
 #  ffmpeg_arguments: '-pred 1 -q:v 2'
 # - name: Garage Wyze
 #   platform: ffmpeg
@@ -6,11 +6,23 @@
 #   extra_arguments: '-pred 1 -q:v 2'
 # - name: Jessi Location
 #   platform: generic
-#   still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.jessi_jessis_iphone.attributes.latitude }},{{ states.device_tracker.jessi_jessis_iphone.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:J%7C{{ states.device_tracker.jessi_jessis_iphone.attributes.latitude }},{{ states.device_tracker.jessi_jessis_iphone.attributes.longitude }}
+#   still_image_url: >
+#     https://maps.googleapis.com/maps/api/staticmap?center=
+#     {{ states.device_tracker.jessi_jessis_iphone.attributes.latitude }},
+#     {{ states.device_tracker.jessi_jessis_iphone.attributes.longitude }}
+#     &zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:J%7C
+#     {{ states.device_tracker.jessi_jessis_iphone.attributes.latitude }},
+#     {{ states.device_tracker.jessi_jessis_iphone.attributes.longitude }}
 #   limit_refetch_to_url_change: true
 # - name: Pete Location
 #   platform: generic
-#   still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.pete_petes_iphone.attributes.latitude }},{{ states.device_tracker.pete_petes_iphone.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.pete_petes_iphone.attributes.latitude }},{{ states.device_tracker.pete_petes_iphone.attributes.longitude }}
+#   still_image_url: >
+#   https://maps.googleapis.com/maps/api/staticmap?center=
+#   {{ states.device_tracker.pete_petes_iphone.attributes.latitude }},
+#   {{ states.device_tracker.pete_petes_iphone.attributes.longitude }}
+#   &zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C
+#   {{ states.device_tracker.pete_petes_iphone.attributes.latitude }},
+#   {{ states.device_tracker.pete_petes_iphone.attributes.longitude }}
 #   limit_refetch_to_url_change: true
 # - name: Back Deck Last Motion
 #   platform: generic
