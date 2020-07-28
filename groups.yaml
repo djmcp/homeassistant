@@ -6,7 +6,7 @@
 
 default_view:
   icon: mdi:home
-  entities: 
+  entities:
     #- group.home_status
     - group.climate
     - group.locks
@@ -17,7 +17,7 @@ default_view:
 downstairs:
   name: Downstairs
   #icon: mdi:sofa
-  entities: 
+  entities:
     - group.kitchen
     - group.living_room
     - group.entry
@@ -62,7 +62,7 @@ people:
     - input_select.guest_mode
 
 media_players:
-  name: media media players 
+  name: media media players
   icon: mdi:television
   entities:
     - media_player.media_room
@@ -98,7 +98,7 @@ automations:
 ###############################
 #                             #
 #           CARDS             #
-#                             # 
+#                             #
 ###############################
 
 climate:
@@ -138,7 +138,6 @@ alerts:
     - alert.garage_entry_door_battery
     - alert.garage_main_door_open
 
-    
 mcdowells:
   name: The McDowells
   entities:
@@ -181,8 +180,8 @@ living_room:
 downstairs_media:
   name: Downstairs Media
   entities:
-    #- media_player.living_room_tv
-    #- media_player.living_room_cc
+    # - media_player.living_room_tv
+    # - media_player.living_room_cc
 
 kitchen:
   name: Kitchen
@@ -193,7 +192,7 @@ kitchen:
     - lock.back_door
 
 garage_entry:
-  name: Garage Entry 
+  name: Garage Entry
   entities:
     - switch.garage_entry
     - lock.garage_entry_door
@@ -357,7 +356,6 @@ arlo_camera_last_images:
     - camera.back_deck_last_motion
     - camera.basement_last_motion
 
-
 door_sensors:
   name: Door Sensors
   entities:
@@ -365,14 +363,12 @@ door_sensors:
     - binary_sensor.back_door_opened
     - binary_sensor.garage_entry_door_opened
 
-
 window_sensors:
   name: Window Sensors
   entities:
     - binary_sensor.left_dining_window_opened
     - binary_sensor.middle_dining_window_opened
     - binary_sensor.right_dining_window_opened
-    
 
 #basement_all_lights:
 #  name: Basement All Lights

@@ -38,27 +38,27 @@
         lastBuildStatus: "{{ state_attr('sensor.travis_rest_xml','@lastBuildStatus') }}"
         lastBuildLabel: "{{ state_attr('sensor.travis_rest_xml','@lastBuildLabel') }}"
         lastBuildTime: "{{ state_attr('sensor.travis_rest_xml','@lastBuildTime') }}"
-        lastBuildTimeCST: < 
+        lastBuildTimeCST: <
           "{{ as_timestamp(state_attr('sensor.travis_repo_info',
           'lastBuildTime'))|timestamp_local }}"
         webURL: "{{ state_attr('sensor.travis_rest_xml','@webUrl') }}"
 
     nuc_outlet_power_sensor:
       value_template: '{{ states.switch.nuc_outlet.attributes.current_power_w }}'
-      unit_of_measurement:  'W'
+      unit_of_measurement: 'W'
 
     living_room_ec_power_sensor:
       value_template: '{{ states.switch.living_room_ec.attributes.current_power_w }}'
-      unit_of_measurement:  'W'
+      unit_of_measurement: 'W'
 
     nordictrack_treadmill_power_sensor:
       friendly_name: Nordictrack Treadmill Power Sensor
       value_template: '{{ states.switch.nordictrack_treadmill.attributes.current_power_w }}'
-      unit_of_measurement:  'W'
+      unit_of_measurement: 'W'
 
     laundry_washer_power_sensor:
       value_template: '{{ states.switch.laundry_washer.attributes.current_power_w }}'
-      unit_of_measurement:  'W'
+      unit_of_measurement: 'W'
 
     nordictrack_treadmill_status:
       friendly_name: "Nordictrack Treadmill Status"
@@ -128,7 +128,7 @@
           0
         {% else %}
           -1
-        {% endif %}  
+        {% endif %}
 
     sprinkler_status_back_fence:
       friendly_name: "Sprinkler Status Back Fence"
@@ -139,7 +139,7 @@
           0
         {% else %}
           -1
-        {% endif %} 
+        {% endif %}
 
     sprinkler_status_center_backyard:
       friendly_name: "Sprinkler Status Center Backyard"
@@ -150,7 +150,7 @@
           0
         {% else %}
           -1
-        {% endif %} 
+        {% endif %}
 
     sprinkler_status_south_side:
       friendly_name: "Sprinkler Status South Side"
@@ -161,7 +161,7 @@
           0
         {% else %}
           -1
-        {% endif %} 
+        {% endif %}
 
     sprinkler_status_north_side_driveway:
       friendly_name: "Sprinkler Status North Side Driveway"
@@ -172,7 +172,7 @@
           0
         {% else %}
           -1
-        {% endif %} 
+        {% endif %}
 
     thermostat_target_temp:
       value_template: '{{ states.climate.thermostat.attributes.temperature }}'
@@ -237,7 +237,7 @@
     #     {% else %}
     #       Unknown
     #     {% endif %}
-    #   friendly_name: 'Arlo Living Room Mode'  
+    #   friendly_name: 'Arlo Living Room Mode'
 
     # arlo_g_base_station_armament:
     #   value_template: >-
@@ -254,7 +254,7 @@
     #     {% else %}
     #       Unknown
     #     {% endif %}
-    #   friendly_name: 'Arlo Garage Mode'     
+    #   friendly_name: 'Arlo Garage Mode'
 
 - platform: systemmonitor
   resources:
@@ -296,7 +296,7 @@
 - platform: mqtt
   name: "Dryer Power Current"
   state_topic: "esp_dryermon-7D77DC/SCT"
-  unit_of_measurement : "A"
+  unit_of_measurement: "A"
   icon: mdi:flash-circle
 
 - platform: mqtt

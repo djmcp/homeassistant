@@ -31,7 +31,7 @@ media_room_tv_on_plex:
         entity_id: remote.media_room_hub
         device: 53158405
         delay_secs: 2
-        command:    
+        command:
           - SmartHub
           - DirectionRight
           - DirectionRight
@@ -61,7 +61,6 @@ media_room_play_tv:
         command:
           - Play
 
-
 media_room_tv_off:
   alias: Media Room TV Off
   sequence:
@@ -73,6 +72,3 @@ media_room_tv_off:
         delay_secs: 2
         command:
           - PowerOff
-
-
-
