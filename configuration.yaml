@@ -17,7 +17,7 @@ homeassistant:
 
 
   # add this part
-  th_providers:
+  auth_providers:
     - type: homeassistant
     - type: trusted_networks
       trusted_networks:
