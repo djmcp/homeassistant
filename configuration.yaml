@@ -121,6 +121,11 @@ ffmpeg:
 ifttt:
   key: !secret ifttt_key
 
+speedtestdotnet:
+  server_id: 8088
+  scan_interval:
+    minutes: 30
+
 # zone:
 #   - name: Home
 #     latitude: !secret home_lat
