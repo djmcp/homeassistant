@@ -192,3 +192,7 @@ lutron_caseta:
 #usps:
 #    username: !secret usps_user
 #    password: !secret usps_pass
+
+########################
+# Run CI for latest HA #
+########################
