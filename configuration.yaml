@@ -199,4 +199,5 @@ lutron_caseta:
 panel_iframe:
   router:
     title: 'Logs'
-    url: 'http://10.0.0.135:8123/config/logs'
+    icon: mdi:math-log
+    url: '/config/logs'
