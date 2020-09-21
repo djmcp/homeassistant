@@ -116,7 +116,6 @@
 #######################################
 
 - platform: broadlink
-  friendly_name: Heater Remote
-  host: 10.0.0.182
   mac: '34:EA:34:4A:2A:94'
-  type: rm_mini
+  switches:
+    - name: Heater Remote
