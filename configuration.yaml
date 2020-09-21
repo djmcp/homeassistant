@@ -195,3 +195,8 @@ lutron_caseta:
 ########################
 # Run CI for latest HA #
 ########################
+
+panel_iframe:
+  router:
+    title: 'Logs'
+    url: 'http://10.0.0.135:8123/config/logs'
