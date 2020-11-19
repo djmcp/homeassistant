@@ -42,6 +42,15 @@ alexa:
       - switch.brooks_space_heater_outlet
       - switch.brooks_snoo_outlet
       - cover.main_garage_door
+      - light.tagreader_led
+      - switch.tagreader_led_enabled
+      - switch.tagreader_buzzer_enabled
+      - switch.every_afternoon_at_3pm_schedule
+      - switch.twice_a_day_schedule
+      - switch.mcdowell_rachio_rain_delay
+      - switch.daily_watering_schedule
+      - switch.mcdowell_rachio_in_standby_mode
+      - switch.heater_remote
     exclude_domains:
       - automation
       - script
