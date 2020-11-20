@@ -196,8 +196,3 @@ lutron_caseta:
 # Run CI for latest HA #
 ########################
 
-panel_iframe:
-  router:
-    title: 'Logs'
-    icon: mdi:math-log
-    url: '/config/logs'
