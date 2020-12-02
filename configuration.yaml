@@ -145,6 +145,10 @@ speedtestdotnet:
 tts:
   - platform: google_translate
     service_name: google_say
+    cache_dir: /tmp/tts
+    time_memory: 300
+    base_url: http://10.0.0.135:8123
+    service_name: google_say
 
 # mqtt:
 #   broker: !secret mqtt_broker
