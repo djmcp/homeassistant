@@ -149,6 +149,12 @@ tts:
     time_memory: 300
     base_url: http://10.0.0.135:8123
     service_name: google_say
+  - platform: marytts
+    host: '10.0.0.135'
+    port: 59125
+    codec: 'WAVE_FILE'
+    voice: 'cmu-slt-hsmm'
+    language: 'en_US'
 
 # mqtt:
 #   broker: !secret mqtt_broker
