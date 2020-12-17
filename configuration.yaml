@@ -181,9 +181,9 @@ lutron_caseta:
   certfile: caseta.crt
   ca_certs: caseta-bridge.crt
 
-duckdns:
-  domain: !secret duckdns_subdomain
-  access_token: !secret duckdns_token
+# duckdns:
+#   domain: !secret duckdns_subdomain
+#   access_token: !secret duckdns_token
 
 # media_player:
 #  - platform: plex
