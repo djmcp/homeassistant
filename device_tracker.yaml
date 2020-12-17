@@ -8,7 +8,7 @@
     # jessis_iphone_ping: 10.0.0.121
 
 - platform: netgear
-  host: 10.0.0.10
+  host: 10.0.0.2
   port: 80
   username: !secret orbi_user
   password: !secret orbi_pass
