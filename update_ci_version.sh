@@ -6,5 +6,7 @@ rm prev_gitlab-ci.yml
 mv .gitlab-ci.yml prev_gitlab-ci.yml
 mv temp_gitlab-ci.yml .gitlab-ci.yml
 git add .gitlab-ci.yml
+git add .HA_VERSION
+git add prev_gitlab-ci.yml
 git commit -m "Update CI current HA Version to $HA_VER [ci skip]"
 git push
