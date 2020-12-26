@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace",
     "data": {
         "config": {
             "title": "Home",
@@ -225,7 +227,7 @@
                                     "entity": "binary_sensor.living_room_ec"
                                 },
                                 {
-                                    "entity": "sensor.media_room_samsung_online"
+                                    "entity": "sensor.media_room_samsung_status"
                                 },
                                 {
                                     "entity": "switch.christmas_tree"
@@ -968,7 +970,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace",
-    "version": 1
+    }
 }
