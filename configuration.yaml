@@ -120,11 +120,11 @@ ffmpeg:
 ifttt:
   key: !secret ifttt_key
 
-speedtestdotnet:
-  server_id: 8088
-  scan_interval:
-    minutes: 360
-  manual: true
+# speedtestdotnet:
+#   server_id: 8088
+#   scan_interval:
+#     minutes: 360
+#   manual: true
 
 # zone:
 #   - name: Home

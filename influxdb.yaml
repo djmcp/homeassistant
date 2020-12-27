@@ -25,6 +25,6 @@ include:
     - sensor.bottle_warmer_stats_15min
     - sensor.bottle_warmer_power
     - sensor.dryer_power_current
-    - sensor.speedtest_download
-    - sensor.speedtest_upload
-    - sensor.speedtest_ping
+    # - sensor.speedtest_download
+    # - sensor.speedtest_upload
+    # - sensor.speedtest_ping
