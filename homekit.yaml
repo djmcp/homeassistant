@@ -16,6 +16,8 @@ filter:
     - light.media_room_back_left
     - light.media_room_back_right
     - light.media_room_center
+    - light.media_room_back_lights
+    - light.media_room_tv_lights
     - light.basement_stairs_bottom
     - light.basement_stairs_top
     - light.do_not_use_breakfast_table_lights
@@ -33,3 +35,14 @@ filter:
     - switch.living_room_ec
     - switch.nuc_outlet
     - switch.laundry_washer
+    - switch.bottle_warmer
+    - switch.daily_watering_schedule
+    - switch.every_afternoon_at_3pm_schedule
+    - switch.mcdowell_rachio_in_standby_mode
+    - switch.mcdowell_rachio_rain_delay
+    - switch.twice_a_day_schedule
+    - switch.tagreader_led_enabled
+    - switch.tagreader_buzzer_enabled
+    - light.tagreader_led
+    - switch.heater_remote
+    - switch.brooks_space_heater_outlet
