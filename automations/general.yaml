@@ -5,3 +5,16 @@
       event: start
   action:
     - service: shell_command.update_ci_cur_ver
+
+- id: basement_test
+  trigger:
+    - platform: zone
+      entity_id: person.pete
+      zone: zone.basement
+      # Event is either enter or leave
+      event: enter # or "leave"
+  action:
+    - alias: Toggle Media Room
+      data:
+        entity_id: light.media_room_lights
+      service: light.toggle
