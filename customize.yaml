@@ -84,3 +84,9 @@ zone.home:
     uuid: B0702980-A295-A8AB-F734-031A98A512DE
     major: 3
     minor: 12
+
+zone.basement:
+  beacon:
+    uuid: 207C2981-2295-C8AB-D124-931A283512DE
+    major: 8
+    minor: 1
