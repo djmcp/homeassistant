@@ -1,0 +1,36 @@
+- id: '1624212840167'
+  alias: Basement Beacon
+  description: ''
+  trigger:
+  - platform: webhook
+    webhook_id: basement_beacon_entered
+  condition: []
+  action:
+  - service: light.toggle
+    data: {}
+    target:
+      entity_id: light.basement_bar_left
+  mode: single
+- id: '1624213072685'
+  alias: Basement Beacon
+  description: ''
+  trigger:
+  - platform: webhook
+    webhook_id: basement_beacon_entered
+  condition: []
+  action:
+  - service: light.toggle
+    data: {}
+    target:
+      entity_id: light.basement_bar_left
+  mode: single
+- id: '1624213542334'
+  alias: homeassistant_start
+  description: Update the CI version at startup
+  trigger:
+  - platform: homeassistant
+    event: start
+  condition: []
+  action:
+  - service: shell_command.update_ci_cur_ver
+  mode: single
