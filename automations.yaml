@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 - id: '1624212840167'
   alias: Basement Beacon
   description: ''
@@ -34,3 +35,12 @@
   action:
   - service: shell_command.update_ci_cur_ver
   mode: single
+=======
+- id: homeassistant_start
+  alias: homeassistant_start
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    - service: shell_command.update_ci_cur_ver
+>>>>>>> 3648acd45e4ae36152a883ddf60a828486cb5d94
