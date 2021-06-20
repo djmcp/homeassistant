@@ -1,7 +1,20 @@
 - id: homeassistant_start
   alias: homeassistant_start
   trigger:
-    - platform: homeassistant
-      event: start
+  - platform: homeassistant
+    event: start
   action:
-    - service: shell_command.update_ci_cur_ver
+  - service: shell_command.update_ci_cur_ver
+- id: '1624214565059'
+  alias: Basement Beacon Enter
+  description: Trigger something when the beacon is encountered
+  trigger:
+  - platform: webhook
+    webhook_id: basement_beacon_enter
+  condition: []
+  action:
+  - service: light.toggle
+    data: {}
+    target:
+      entity_id: light.basement_bar_lights
+  mode: single
