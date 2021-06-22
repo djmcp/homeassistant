@@ -36,10 +36,6 @@
                             "type": "thermostat"
                         },
                         {
-                            "entity": "climate.thermostat",
-                            "type": "custom:ecobee-card"
-                        },
-                        {
                             "entities": [
                                 "lock.back_door",
                                 "lock.front_door",
@@ -573,25 +569,13 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "device_tracker.pete_petes_iphone"
-                                },
-                                {
-                                    "entity": "device_tracker.jessi_jessis_iphone"
-                                },
-                                {
                                     "entity": "person.pete"
                                 },
                                 {
                                     "entity": "person.jessi"
                                 },
                                 {
-                                    "entity": "device_tracker.jessi_mcdowells_iphone_2"
-                                },
-                                {
                                     "entity": "device_tracker.jessi_mcdowells_iphone"
-                                },
-                                {
-                                    "entity": "device_tracker.pete_petes_iphone"
                                 },
                                 {
                                     "entity": "device_tracker.pete_s_iphone"
@@ -764,7 +748,7 @@
                                     "entity": "input_boolean.vacation_mode"
                                 },
                                 {
-                                    "entity": "input_boolean.guest_mode"
+                                    "entity": "input_select.guest_mode"
                                 },
                                 {
                                     "entity": "input_boolean.volume_up"
