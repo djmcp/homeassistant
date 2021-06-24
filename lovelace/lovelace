@@ -806,6 +806,9 @@
                                 },
                                 {
                                     "entity": "input_select.ha_git_update"
+                                },
+                                {
+                                    "entity": "input_boolean.work_laptop_online"
                                 }
                             ],
                             "show_header_toggle": false,
