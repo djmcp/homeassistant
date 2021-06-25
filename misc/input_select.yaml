@@ -111,3 +111,10 @@ ha_git_update:
     - 'Git Pull'
     - 'Git Pull HA Restart'
     - 'Idle'
+
+work_laptop_online:
+  name: Work Laptop Online
+  options:
+    - 'Online'
+    - 'Check In'
+    - 'Offline'

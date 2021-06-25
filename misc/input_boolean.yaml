@@ -65,6 +65,3 @@ hass_cast_off:
 
 hass_cast_cameras:
   name: HASS Cast Cameras
-
-work_laptop_online:
-  name: Work Laptop Online
