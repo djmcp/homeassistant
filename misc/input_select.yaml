@@ -118,3 +118,4 @@ work_laptop_online:
     - 'Online'
     - 'Check In'
     - 'Offline'
+  initial: 'Offline'
