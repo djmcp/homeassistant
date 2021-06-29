@@ -13,7 +13,9 @@
     webhook_id: work_laptop_on
   condition: []
   action:
-  - service: input_boolean.turn_on
+  - service: input_select.select_option
+    data:
+      option: Check In
     target:
-      entity_id: input_boolean.work_laptop_online
+      entity_id: input_select.work_laptop_online
   mode: single
