@@ -7,16 +7,30 @@
   - service: shell_command.update_ci_cur_ver
   mode: single
 - id: '1624214565059'
-  alias: Work laptop on
-  description: Receive webhook from work laptop every 30 minutes
+  alias: Work laptop unlocked
+  description: Receive webhook from work laptop when it is unlocked
   trigger:
   - platform: webhook
-    webhook_id: work_laptop_on
+    webhook_id: work_laptop_unlocked
   condition: []
   action:
   - service: input_select.select_option
     data:
-      option: Check In
+      option: Online
+    target:
+      entity_id: input_select.work_laptop_online
+  mode: single
+- id: '1625146580594'
+  alias: Work laptop locked
+  description: Receive webhook from work laptop is locked
+  trigger:
+  - platform: webhook
+    webhook_id: work_laptop_locked
+  condition: []
+  action:
+  - service: input_select.select_option
+    data:
+      option: Offline
     target:
       entity_id: input_select.work_laptop_online
   mode: single
