@@ -17,13 +17,16 @@
                                     "entity": "sensor.thermostat_temperature"
                                 },
                                 {
-                                    "entity": "sensor.downstairs_temperature"
-                                },
-                                {
                                     "entity": "sensor.nursery_temperature"
                                 },
                                 {
                                     "entity": "sensor.master_bedroom_temperature"
+                                },
+                                {
+                                    "entity": "sensor.downstairs_temperature_2"
+                                },
+                                {
+                                    "entity": "sensor.master_bedroom_temperature_3"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -372,6 +375,8 @@
                         {
                             "entities": [
                                 {
+                                    "entity": "binary_sensor.basement_door_opened"
+                                },
                                 {
                                     "entity": "binary_sensor.basement_stairs_motion"
                                 },
@@ -423,6 +428,9 @@
                                 },
                                 {
                                     "entity": "timer.basement_stairs_off"
+                                },
+                                {
+                                    "entity": "timer.work_laptop_online"
                                 }
                             ],
                             "title": "Timers",
@@ -495,13 +503,10 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "light.nursery_lights"
+                                    "entity": "light.brooks_bedroom_lights"
                                 },
                                 {
-                                    "entity": "light.nursery_side_lights"
-                                },
-                                {
-                                    "entity": "switch.brooks_snoo_outlet"
+                                    "entity": "light.brooks_bedroom_side_lights"
                                 },
                                 {
                                     "entity": "binary_sensor.brooks_snoo_status"
@@ -626,6 +631,16 @@
                             "show_header_toggle": false,
                             "title": "Network Status",
                             "type": "entities"
+                        },
+                        {
+                            "type": "map",
+                            "entities": [
+                                {
+                                    "entity": "device_tracker.jessi_mcdowells_iphone"
+                                }
+                            ],
+                            "default_zoom": 15,
+                            "hours_to_show": 2
                         }
                     ],
                     "icon": "mdi:account-multiple",
