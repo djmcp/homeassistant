@@ -1,4 +1,4 @@
 git_pull: ssh pete@10.0.0.135 "cd /srv/docker/hass && git pull"
 update_ci_cur_ver: ssh pete@10.0.0.135 "cd /srv/docker/hass && ./update_ci_version.sh"
-evergy_current: ssh pete@10.0.0.135 "/usr/bin/python2.7 /srv/docker/evergy_current.py"
-evergy_previous: ssh pete@10.0.0.135 "/usr/bin/python2.7 /srv/docker/evergy_previous.py"
+evergy_current: ssh pete@10.0.0.135 "/usr/bin/python2.7 /srv/docker/scripts/evergy_current.py"
+evergy_previous: ssh pete@10.0.0.135 "/usr/bin/python2.7 /srv/docker/scripts/evergy_previous.py"
