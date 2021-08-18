@@ -104,12 +104,6 @@
                             "type": "entities"
                         },
                         {
-                            "entity": "sensor.speedtest_download",
-                            "max": 1000,
-                            "min": 0,
-                            "type": "gauge"
-                        },
-                        {
                             "cards": [
                                 {
                                     "hold_action": {
@@ -174,6 +168,32 @@
                             ],
                             "title": "Github Status",
                             "type": "vertical-stack"
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "title": "Electricity Usage",
+                            "cards": [
+                                {
+                                    "type": "history-graph",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.current_electricity_usage"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "refresh_interval": 0
+                                },
+                                {
+                                    "type": "history-graph",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.previous_electricity_usage"
+                                        }
+                                    ],
+                                    "hours_to_show": 240,
+                                    "refresh_interval": 0
+                                }
+                            ]
                         }
                     ],
                     "icon": "mdi:home",
