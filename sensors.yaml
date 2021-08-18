@@ -286,4 +286,16 @@
   unit_of_measurement: "kW"
   json_attributes_topic: "home/evergy/previous/attributes"
 
+- platform: mqtt
+  name: "Current Electricity Cost"
+  state_topic: "home/evergy/current/cost"
+  value_template: "${{ value_json.current_electricity_cost}}
+  json_attributes_topic: "home/evergy/current/attributes"
+
+- platform: mqtt
+  name: "Previous Electricity Cost"
+  state_topic: "home/evergy/previous/cost"
+  value_template: "${{ value_json.previous_electricity_cost}}
+  json_attributes_topic: "home/evergy/previous/attributes"
+
 
