@@ -27,3 +27,5 @@ include:
     - sensor.dryer_power_current
     - sensor.current_electricity_usage
     - sensor.previous_electricity_usage
+    - sensor.current_electricity_cost
+    - sensor.previous_electricity_cost
