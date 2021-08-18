@@ -297,5 +297,4 @@
   state_topic: "home/evergy/previous/cost"
   value_template: "${{ value_json.previous_electricity_cost}}
   json_attributes_topic: "home/evergy/previous/attributes"
-
-
+  
