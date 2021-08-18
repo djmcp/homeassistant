@@ -273,3 +273,17 @@
 - platform: mqtt
   name: "DryerMon Status"
   state_topic: "esp_dryermon-7D77DC/BUILD"
+
+- platform: mqtt
+  name: "Current Electricity Usage"
+  state_topic: "home/evergy/current/usage"
+  unit_of_measurement: "kW"
+  json_attributes_topic: "home/evergy/current/attributes"
+
+- platform: mqtt
+  name: "Previous Electricity Usage"
+  state_topic: "home/evergy/previous/usage"
+  unit_of_measurement: "kW"
+  json_attributes_topic: "home/evergy/previous/attributes"
+
+
