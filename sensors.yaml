@@ -43,29 +43,29 @@
           'lastBuildTime'))|timestamp_local }}"
         webURL: "{{ state_attr('sensor.travis_rest_xml','@webUrl') }}"
 
-    nuc_outlet_power_sensor:
-      value_template: '{{ states.switch.nuc_outlet.attributes.current_power_w }}'
-      unit_of_measurement: 'W'
+    # nuc_outlet_power_sensor:
+    #   value_template: '{{ states.switch.nuc_outlet.attributes.current_power_w }}'
+    #   unit_of_measurement: 'W'
 
-    living_room_ec_power_sensor:
-      value_template: '{{ states.switch.living_room_ec.attributes.current_power_w }}'
-      unit_of_measurement: 'W'
+    # living_room_ec_power_sensor:
+    #   value_template: '{{ states.switch.living_room_ec.attributes.current_power_w }}'
+    #   unit_of_measurement: 'W'
 
-    nordictrack_treadmill_power_sensor:
-      friendly_name: Nordictrack Treadmill Power Sensor
-      value_template: '{{ states.switch.nordictrack_treadmill.attributes.current_power_w }}'
-      unit_of_measurement: 'W'
+    # nordictrack_treadmill_power_sensor:
+    #   friendly_name: Nordictrack Treadmill Power Sensor
+    #   value_template: '{{ states.switch.nordictrack_treadmill.attributes.current_power_w }}'
+    #   unit_of_measurement: 'W'
 
-    laundry_washer_power_sensor:
-      value_template: '{{ states.switch.laundry_washer.attributes.current_power_w }}'
-      unit_of_measurement: 'W'
+    # laundry_washer_power_sensor:
+    #   value_template: '{{ states.switch.laundry_washer.attributes.current_power_w }}'
+    #   unit_of_measurement: 'W'
 
     nordictrack_treadmill_status:
       friendly_name: "Nordictrack Treadmill Status"
       value_template: >-
-        {% if states('sensor.nordictrack_treadmill_power_sensor')|float > 50 %}
+        {% if states('sensor.nordictrack_treadmill_current_consumption')|float > 50 %}
           In Use
-        {% elif states('sensor.nordictrack_treadmill_power_sensor')|float > 1 %}
+        {% elif states('sensor.nordictrack_treadmill_current_consumption')|float > 1 %}
           Idle
         {% else %}
           Off
