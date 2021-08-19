@@ -224,11 +224,11 @@
 
     current_electricity_cost:
       friendly_name: 'Current Electricity Cost'
-      value_template: '{{ states.sensor.current_electricity_usage.attributes.cost }}'
+      value_template: '{{ states.sensor.current_electricity_consuption.attributes.cost }}'
 
     previous_electricity_cost:
       friendly_name: 'Previous Electricity Cost'
-      value_template: '{{ states.sensor.previous_electricity_usage.attributes.cost }}'
+      value_template: '{{ states.sensor.previous_electricity_consunmption.attributes.cost }}'
 
 - platform: systemmonitor
   resources:
@@ -283,13 +283,13 @@
   state_topic: "esp_dryermon-7D77DC/BUILD"
 
 - platform: mqtt
-  name: "Current Electricity Usage"
+  name: "Current Electricity Consumption"
   state_topic: "home/evergy/current/usage"
   unit_of_measurement: "kW"
   json_attributes_topic: "home/evergy/current/attributes"
 
 - platform: mqtt
-  name: "Previous Electricity Usage"
+  name: "Previous Electricity Consumption"
   state_topic: "home/evergy/previous/usage"
   unit_of_measurement: "kW"
   json_attributes_topic: "home/evergy/previous/attributes"
