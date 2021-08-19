@@ -224,11 +224,11 @@
 
     current_electricity_cost:
       friendly_name: 'Current Electricity Cost'
-      value_template: '{{ states.sensor.current_electricity_consuption.attributes.cost }}'
+      value_template: '{{ states.sensor.current_electricity_consumption.attributes.cost }}'
 
     previous_electricity_cost:
       friendly_name: 'Previous Electricity Cost'
-      value_template: '{{ states.sensor.previous_electricity_consunmption.attributes.cost }}'
+      value_template: '{{ states.sensor.previous_electricity_consumption.attributes.cost }}'
 
 - platform: systemmonitor
   resources:
