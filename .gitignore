@@ -12,6 +12,7 @@
 /automations/._*
 /.storage
 !/.storage/lovelace
+custom_components/
 
 .ssh
 .cloud
