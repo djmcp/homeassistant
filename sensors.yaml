@@ -225,11 +225,13 @@
     current_electricity_cost:
       friendly_name: 'Current Electricity Cost'
       value_template: '{{ states.sensor.current_electricity_consumption.attributes.cost }}'
+      unit_of_measurement: '$'
 
     previous_electricity_cost:
       friendly_name: 'Previous Electricity Cost'
       value_template: '{{ states.sensor.previous_electricity_consumption.attributes.cost }}'
-
+      unit_of_measurement: '$'
+      
 - platform: systemmonitor
   resources:
     - type: disk_use_percent
@@ -288,7 +290,7 @@
   json_attributes_topic: "home/evergy/current/attributes"
   device_class: energy
   unit_of_measurement: "kW"
-  
+
 - platform: mqtt
   name: "Previous Electricity Consumption"
   state_topic: "home/evergy/previous/usage"
