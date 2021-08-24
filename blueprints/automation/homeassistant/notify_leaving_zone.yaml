@@ -34,7 +34,7 @@ variables:
 
 condition:
   condition: template
-  value_template: "{{ trigger.from_state.state == zone_state and 
+  value_template: "{{ trigger.from_state.state == zone_state and
     trigger.to_state.state != zone_state }}"
 
 action:

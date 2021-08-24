@@ -231,7 +231,7 @@
       friendly_name: 'Previous Electricity Cost'
       value_template: '{{ states.sensor.previous_electricity_consumption.attributes.cost }}'
       unit_of_measurement: '$'
-      
+
 - platform: systemmonitor
   resources:
     - type: disk_use_percent
