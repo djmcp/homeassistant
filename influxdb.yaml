@@ -25,7 +25,7 @@ include:
     - sensor.bottle_warmer_stats_15min
     - sensor.bottle_warmer_power
     - sensor.dryer_power_current
-    - sensor.current_electricity_usage
-    - sensor.previous_electricity_usage
+    - sensor.current_electricity_consumption
+    - sensor.previous_electricity_consumption
     - sensor.current_electricity_cost
     - sensor.previous_electricity_cost
