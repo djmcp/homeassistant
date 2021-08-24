@@ -46,4 +46,3 @@ filter:
     - switch.heater_remote
     - switch.brooks_space_heater_outlet
     - cover.side_garage_door
-    
