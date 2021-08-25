@@ -7,7 +7,7 @@ stages:
   # - temp
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-  HA_VERSION: 2021.8.7
+  HA_VERSION: 2021.8.8
 # Generic preflight template
 .preflight: &preflight
   stage: preflight
