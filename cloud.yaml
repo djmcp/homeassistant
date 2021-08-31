@@ -51,6 +51,8 @@ alexa:
       - switch.daily_watering_schedule
       - switch.mcdowell_rachio_in_standby_mode
       - switch.heater_remote
+      - switch.tv_living_room_samsung
+      - switch.media_room_samsung
     exclude_domains:
       - automation
       - script
