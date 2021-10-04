@@ -92,7 +92,6 @@ automations:
     - group.hass_reload
     - group.hass_resources
     - group.all_scenes
-    - group.outlets
     - group.timers
 
 ###############################
@@ -105,16 +104,12 @@ climate:
   name: Climate
   entities:
     - climate.thermostat
-    - sensor.bedroom_wink_relay_temperature
-    - sensor.kitchen_wink_relay_temperature
     - sensor.avg_house_temp
     - sensor.avg_upstairs_temp
 
 house_temp:
   name: House Temperature
   entities:
-    - sensor.bedroom_wink_relay_temperature
-    - sensor.kitchen_wink_relay_temperature
     - sensor.thermostat_temp
 
 home_status:
@@ -307,12 +302,6 @@ boolean_switches:
     - input_boolean.basement_bedroom
     - binary_sensor.pete_phone_charger_charging
     - binary_sensor.jessi_phone_charger_charging
-
-outlets:
-  name: Outlets
-  entities:
-    - switch.wink_outlet
-
 
 hass_resources:
   name: HASS Resources

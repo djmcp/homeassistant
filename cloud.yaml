@@ -9,7 +9,6 @@ alexa:
       - light.media_room_center
       - switch.main_garage_door_relay_power
       - switch.side_garage_door_relay_power
-      - switch.wink_outlet
       - light.basement_stairs_top
       - light.basement_stairs_bottom
       - switch.jessi_phone_charger
@@ -53,6 +52,10 @@ alexa:
       - switch.heater_remote
       - switch.tv_living_room_samsung
       - switch.media_room_samsung
+      - switch.fridge_sabbath_mode
+      - light.brooks_bedroom_side_lights
+      - switch.living_room_hub_watch_tv
+      - switch.living_room_hub_watch_tv_hass
     exclude_domains:
       - automation
       - script
