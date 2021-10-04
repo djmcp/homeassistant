@@ -109,7 +109,7 @@
 - platform: template
   sensors:
     living_room_ec:
-      value_template: "{{ states('sensor.living_room_ec_power_sensor')|float > 10 }}"
+      value_template: "{{ states('sensor.living_room_ec_current_consumption')|float > 10 }}"
       friendly_name: 'Living Room TV'
       device_class: power
 
