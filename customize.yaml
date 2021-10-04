@@ -12,10 +12,6 @@ device_tracker.pete_petes_iphone:
   friendly_name: Pete's Location
 device_tracker.jessi_jessis_iphone:
   friendly_name: Jessi's Location
-sensor.bedroom_wink_relay_temperature:
-  friendly_name: Bedroom Temperature
-sensor.kitchen_wink_relay_temperature:
-  friendly_name: Kitchen Temperature
 light.nursery_lights:
   friendly_name: Nursery Lights
 light.nursery_side_lights:
