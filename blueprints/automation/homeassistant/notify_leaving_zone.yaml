@@ -2,7 +2,7 @@ blueprint:
   name: Zone Notification
   description: Send a notification to a device when a person leaves a specific zone.
   domain: automation
-  source_url: https://github.com/home-assistant/core/blob/dev/components/automation/blueprints/notify_leaving_zone.yaml
+  source_url: https://github.com/home-assistant/core/blob/dev/homeassistant/components/automation/blueprints/notify_leaving_zone.yaml
   input:
     person_entity:
       name: Person
@@ -34,8 +34,7 @@ variables:
 
 condition:
   condition: template
-  value_template: "{{ trigger.from_state.state == zone_state and
-    trigger.to_state.state != zone_state }}"
+  value_template: "{{ trigger.from_state.state == zone_state and trigger.to_state.state != zone_state }}"
 
 action:
   domain: mobile_app
