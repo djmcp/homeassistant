@@ -109,23 +109,23 @@
 - platform: template
   sensors:
     living_room_ec:
-      value_template: "{{ states('sensor.living_room_ec_current_consumption')|float > 10 }}"
+      value_template: "{{ states('sensor.living_room_ec_current_consumption')|float(0) > 10 }}"
       friendly_name: 'Living Room TV'
       device_class: power
 
     brooks_snoo_status:
       friendly_name: 'Brooks Snoo Status'
-      value_template: "{{ states('sensor.brooks_snoo_outlet_power_sensor')|float > 4 }}"
+      value_template: "{{ states('sensor.brooks_snoo_outlet_power_sensor')|float(0) > 4 }}"
       device_class: power
 
     brooks_space_heater_status:
       friendly_name: 'Brooks Space Heater Status'
-      value_template: "{{ states('sensor.brooks_space_heater_power')|float > 10 }}"
+      value_template: "{{ states('sensor.brooks_space_heater_power')|float(0) > 10 }}"
       device_class: power
 
     bottle_warmer_status:
       friendly_name: 'Bottle Warmer Status'
-      value_template: "{{ states('sensor.bottle_warmer_stats_5min')|float > 10 }}"
+      value_template: "{{ states('sensor.bottle_warmer_stats_5min')|float(0) > 10 }}"
       device_class: power
 
 - platform: mqtt
