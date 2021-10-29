@@ -40,7 +40,7 @@
         lastBuildTime: "{{ state_attr('sensor.travis_rest_xml','@lastBuildTime') }}"
         lastBuildTimeCST: <
           "{{ as_timestamp(state_attr('sensor.travis_repo_info',
-          'lastBuildTime'))|timestamp_local }}"
+          'lastBuildTime'),0)|timestamp_local }}"
         webURL: "{{ state_attr('sensor.travis_rest_xml','@webUrl') }}"
 
     # nuc_outlet_power_sensor:
@@ -63,9 +63,9 @@
     nordictrack_treadmill_status:
       friendly_name: "Nordictrack Treadmill Status"
       value_template: >-
-        {% if states('sensor.nordictrack_treadmill_current_consumption')|float > 50 %}
+        {% if states('sensor.nordictrack_treadmill_current_consumption')|float(0) > 50 %}
           In Use
-        {% elif states('sensor.nordictrack_treadmill_current_consumption')|float > 1 %}
+        {% elif states('sensor.nordictrack_treadmill_current_consumption')|float(0) > 1 %}
           Idle
         {% else %}
           Off
@@ -74,9 +74,9 @@
     brooks_space_heater_power_level:
       friendly_name: "Brooks Space Heater Power Level"
       value_template: >-
-        {% if states('sensor.brooks_space_heater_power')|float > 800 %}
+        {% if states('sensor.brooks_space_heater_power')|float(0) > 800 %}
           High
-        {% elif states('sensor.brooks_space_heater_power')|float > 10 %}
+        {% elif states('sensor.brooks_space_heater_power')|float(0) > 10 %}
           Low
         {% else %}
           Off
@@ -85,7 +85,7 @@
     laundry_dryer_status:
       friendly_name: "Laundry Dryer Status"
       value_template: >-
-        {% if states('sensor.dryer_power_current')|float > 2 %}
+        {% if states('sensor.dryer_power_current')|float(0) > 2 %}
           Drying
         {% else %}
           Not Drying
