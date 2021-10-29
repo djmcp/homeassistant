@@ -7,13 +7,13 @@
     # petes_iphone_ping: 10.0.0.120
     # jessis_iphone_ping: 10.0.0.121
 
-- platform: netgear
-  host: 10.0.0.10
-  port: 80
-  username: !secret orbi_user
-  password: !secret orbi_pass
-  consider_home: 60
-  interval_seconds: 30
-  new_device_defaults:
-    track_new_devices: false
-  accesspoints:
+# - platform: netgear
+#   host: 10.0.0.10
+#   port: 80
+#   username: !secret orbi_user
+#   password: !secret orbi_pass
+#   consider_home: 60
+#   interval_seconds: 30
+#   new_device_defaults:
+#     track_new_devices: false
+#   accesspoints:
