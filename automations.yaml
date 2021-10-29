@@ -34,3 +34,15 @@
     target:
       entity_id: input_select.work_laptop_online
   mode: single
+- id: '1635428778093'
+  alias: Turn on Basement Lights
+  description: ''
+  trigger:
+  - platform: webhook
+    webhook_id: nfc_basement_lights
+  condition: []
+  action:
+  - service: light.toggle
+    target:
+      entity_id: light.basement_lights
+  mode: single
