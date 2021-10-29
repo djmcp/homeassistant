@@ -273,7 +273,7 @@
   name: "Dryer Power Current"
   state_topic: "esp_dryermon-7D77DC/SCT"
   unit_of_measurement: "A"
-  icon: mdi:flash-circle
+  icon: mdi:lightning-bolt-circle
 
 - platform: mqtt
   name: "DryerMon Signal"
