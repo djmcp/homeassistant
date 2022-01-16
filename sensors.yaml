@@ -76,8 +76,10 @@
       value_template: >-
         {% if states('sensor.brooks_space_heater_power')|float(0) > 950 %}
           High
-        {% elif states('sensor.brooks_space_heater_power')|float(0) > 10 %}
+        {% elif states('sensor.brooks_space_heater_power')|float(0) > 50 %}
           Low
+        {% elif states('sensor.brooks_space_heater_power')|float(0) > 8 %}
+          Fan
         {% else %}
           Off
         {% endif %}
