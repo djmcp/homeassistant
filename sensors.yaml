@@ -74,7 +74,7 @@
     brooks_space_heater_power_level:
       friendly_name: "Brooks Space Heater Power Level"
       value_template: >-
-        {% if states('sensor.brooks_space_heater_power')|float(0) > 800 %}
+        {% if states('sensor.brooks_space_heater_power')|float(0) > 950 %}
           High
         {% elif states('sensor.brooks_space_heater_power')|float(0) > 10 %}
           Low
