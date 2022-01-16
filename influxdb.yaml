@@ -17,6 +17,7 @@ include:
     - sensor.sprinkler_status_south_side
     - sensor.sprinkler_status_north_side_driveway
     - sensor.nursery_temperature
+    - sensor.brooks_room_temperature
     - sensor.brooks_space_heater_power
     - input_select.brooks_space_heater_control
     - binary_sensor.brooks_space_heater_status
